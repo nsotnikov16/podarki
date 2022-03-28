@@ -9,7 +9,7 @@
         </div>
         <ul class="menu header__menu">
             <li class="menu__item menu__item_dropdown">
-                <a href="#">Каталог</a>
+                <a class="menu__link" href="#">Каталог</a>
                 <div class="menu__expand copy">
                     <ul class="menu__list-dropdown">
                         <li><a href="#">Подарки на 23 февраля</a></li>
@@ -18,10 +18,10 @@
                     </ul>
                 </div>
             </li>
-            <li class="menu__item"><a href="#">Акции</a></li>
-            <li class="menu__item"><a href="#">Доставка и оплата</a></li>
-            <li class="menu__item"><a href="#">О нас</a></li>
-            <li class="menu__item"><a href="#">Контакты</a></li>
+            <li class="menu__item"><a class="menu__link" href="#">Акции</a></li>
+            <li class="menu__item"><a class="menu__link" href="#">Доставка и оплата</a></li>
+            <li class="menu__item"><a class="menu__link" href="#">О нас</a></li>
+            <li class="menu__item"><a class="menu__link" href="#">Контакты</a></li>
         </ul>
         <a href="tel:+73462229001" class="phone header__phone">
             <svg>
@@ -43,9 +43,6 @@
                 <svg class="search__btn search__btn_inForm">
                     <use href="./img/icons/icons.svg#search"></use>
                 </svg>
-                <div class="search__close">
-                    <span></span><span></span>
-                </div>
             </div>
         </form>
         <ul class="social header__social">
@@ -85,24 +82,36 @@
                 <span></span><span></span><span></span>
             </div>
         </div>
+
         <div class="header__mobile-right">
-            <svg class="search__btn search__btn_outForm">
-                <use href="./img/icons/icons.svg#search"></use>
-            </svg>
-            <a href="+73462229001" class="header__mobile-phone"></a>
+            <form class="form search">
+                <div class="form__row">
+                    <input type="text" placeholder="Поиск подарка" minlength="2" />
+                    <svg class="search__btn search__btn_inForm">
+                        <use href="./img/icons/icons.svg#search"></use>
+                    </svg>
+                    <div class="search__close">
+                        <span></span><span></span>
+                    </div>
+                </div>
+                <svg class="search__btn search__btn_outForm">
+                    <use href="./img/icons/icons.svg#search"></use>
+                </svg>
+            </form>
+            
+            <a href="tel:+73462229001" class="header__mobile-phone"></a>
             <a href="" class="btn header__cart">
                 <div style="position: relative;">
                     <svg>
                         <use href="./img/icons/icons.svg#cart"></use>
                     </svg>
-                    <span>18 500 р.</span>
                     <span class="header__cart-count">2</span>
                 </div>
-
+                <span>18 500 р.</span>
             </a>
         </div>
         <div class="header__mobile-bottom">
-
+            <div class="header__mobile-info"></div>
         </div>
     </div>
 
