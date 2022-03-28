@@ -1,0 +1,15 @@
+.form {
+    &__row {
+        width: 100%;
+        padding: 20px 23px;
+        border: 1px solid rgba(51, 51, 51, 0.3);
+        border-radius: 6px;
+        &:hover {
+            border: 1px solid #FFAF35;
+        }
+
+        input {
+            max-width: 80%;
+        }
+    }
+}

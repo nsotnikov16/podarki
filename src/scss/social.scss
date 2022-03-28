@@ -1,0 +1,48 @@
+.social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    li {
+        margin-right: 15px;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    a {
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        &:hover {
+            background-color: $red;
+        }
+    }
+
+    &__wa {
+        background-color: #29A71A;
+        svg {
+            width: 19px;
+            height: 19px;
+        }
+    }
+
+    &__vk {
+        background-color: #4169E1;
+        svg {
+            width: 19px;
+            height: 11px;
+        }
+    }
+
+    &__viber {
+        background-color: #6F3FAA;
+        svg {
+            width: 18px;
+            height: 19px;
+        }
+    }
+}

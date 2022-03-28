@@ -1,0 +1,96 @@
+.menu {
+    display: grid;
+    grid-template-columns: repeat(5, max-content);
+    gap: 10px 30px;
+
+    &__item {
+        display: inline-block;
+        a {
+            &:hover {
+                color: $red;
+            }
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 18px;
+        }
+    }
+
+    &__item_dropdown {
+        position: relative;
+        > a {
+            display: block;
+            width: 130%;
+        }
+        &:hover {
+            .menu__expand {
+                opacity: 1;
+                visibility: visible;
+            }
+
+            &::after {
+                transform: rotate(45deg);
+                background-color: $red;
+            }
+
+            &::before {
+                transform: rotate(-45deg);
+                background-color: $red;
+            }
+            > a {
+              color: $red;  
+            }
+        }
+
+        &::after,
+        &::before {
+            position: absolute;
+            top: 8px;
+            content: "";
+            width: 7px;
+            height: 2px;
+            background-color: #333333;
+            transition: transform 0.25s ease-in-out;
+            cursor: pointer;
+        }
+        &::after {
+            right: -15px;
+            transform: rotate(-45deg);
+        }
+
+        &::before {
+            right: -11px;
+            transform: rotate(45deg);
+        }
+    }
+
+    &__expand {
+        padding-top: 10px;
+        position: absolute;
+        width: 100%;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.25s ease-in-out, visibility 0.25s ease-in-out;
+    }
+
+    &__list-dropdown {
+        padding: 22px 20px;
+        box-shadow: 0px 4px 20px rgb(51 51 51 / 10%);
+        border-radius: 6px;
+        min-width: 190px;
+        background-color: white;
+        li {
+            margin-bottom: 23px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+        a {
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 18px;
+            &:hover {
+                color: #bc1616;
+            }
+        }
+    }
+}

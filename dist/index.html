@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 	<link rel="stylesheet" href="css/style.css">
 	<!-- <script src="https://api-maps.yandex.ru/2.1/?apikey=613b8b9b-619b-4e88-88da-82b9980c3fee&lang=ru_RU"
@@ -15,10 +15,113 @@
 	<div class="page">
 
 		<header class="header">
-    <div class="page__container">
-        
-
+    <div class="header__container page__container">
+        <a href="/" class="header__logo"></a>
+        <div class="address header__address">
+            <svg>
+                <use href="./img/icons/icons.svg#address"></use>
+            </svg>
+            <p><span>Сургут</span> Индустриальная 34, оф. 21</p>
+        </div>
+        <ul class="menu header__menu">
+            <li class="menu__item menu__item_dropdown">
+                <a href="#">Каталог</a>
+                <div class="menu__expand copy">
+                    <ul class="menu__list-dropdown">
+                        <li><a href="#">Подарки на 23 февраля</a></li>
+                        <li><a href="#">Подарки на 8 марта</a></li>
+                        <li><a href="#">Подарки на НГ</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="menu__item"><a href="#">Акции</a></li>
+            <li class="menu__item"><a href="#">Доставка и оплата</a></li>
+            <li class="menu__item"><a href="#">О нас</a></li>
+            <li class="menu__item"><a href="#">Контакты</a></li>
+        </ul>
+        <a href="tel:+73462229001" class="phone header__phone">
+            <svg>
+                <use href="./img/icons/icons.svg#phone"></use>
+            </svg>
+            <p>+7 3462 22-90-01</p>
+        </a>
+        <div class="header__catalog">
+            <a class="btn btn_catalog" href="">
+                <svg>
+                    <use href="./img/icons/icons.svg#btn_catalog"></use>
+                </svg>
+                <span>Каталог подарков</span>
+            </a>
+        </div>
+        <form class="form search">
+            <div class="form__row">
+                <input type="text" placeholder="Поиск подарка" minlength="2" />
+                <svg class="search__btn search__btn_inForm">
+                    <use href="./img/icons/icons.svg#search"></use>
+                </svg>
+                <div class="search__close">
+                    <span></span><span></span>
+                </div>
+            </div>
+        </form>
+        <ul class="social header__social">
+            <li>
+                <a class="social__wa" href="">
+                    <svg>
+                        <use href="./img/icons/icons.svg#whatsapp"></use>
+                    </svg>
+                </a>
+            </li>
+            <li>
+                <a class="social__vk" href="">
+                    <svg>
+                        <use href="./img/icons/icons.svg#vk"></use>
+                    </svg>
+                </a>
+            </li>
+            <li>
+                <a class="social__viber" href="">
+                    <svg>
+                        <use href="./img/icons/icons.svg#viber"></use>
+                    </svg>
+                </a>
+            </li>
+        </ul>
+        <a href="" class="btn header__cart">
+            <svg>
+                <use href="./img/icons/icons.svg#cart"></use>
+            </svg>
+            <span>18 500 р.</span>
+            <span class="header__cart-count">2</span>
+        </a>
     </div>
+    <div class="header__mobile">
+        <div class="header__mobile-left">
+            <div class="header__burger">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="header__mobile-right">
+            <svg class="search__btn search__btn_outForm">
+                <use href="./img/icons/icons.svg#search"></use>
+            </svg>
+            <a href="+73462229001" class="header__mobile-phone"></a>
+            <a href="" class="btn header__cart">
+                <div style="position: relative;">
+                    <svg>
+                        <use href="./img/icons/icons.svg#cart"></use>
+                    </svg>
+                    <span>18 500 р.</span>
+                    <span class="header__cart-count">2</span>
+                </div>
+
+            </a>
+        </div>
+        <div class="header__mobile-bottom">
+
+        </div>
+    </div>
+
 </header>
 
 		<main>

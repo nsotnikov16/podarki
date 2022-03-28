@@ -9,43 +9,39 @@
   }
 }
 
-$orange: #ffa360;
-$main: #fff;
-$background-main: #161717;
+$main: #333333;
+$red: #E02F2F;
+
 @import "fonts";
 
 @import "normalize";
 
 body {
-  font-family: "Gilroy";
+  font-family: "Museo Sans Cyrl";
 }
 
-h1 {
-  font-weight: 400;
-}
 main {
-  margin-bottom: 100px;
+  margin-bottom: 82px;
 }
 .page {
   color: $main;
-  background-color: $background-main;
   overflow: hidden;
 
   &__container {
     margin: 0 auto;
-    max-width: 1170px;
+    max-width: 1290px;
 
-    @media (max-width: 1220px) {
-      padding: 0 40px;
+    @media (max-width: 1310px) {
+      padding: 0 16px;
     }
 
-    @media (max-width: 768px) {
+    /* @media (max-width: 768px) {
       padding: 0 40px;
     }
 
     @media (max-width: 680px) {
       padding: 0 15px;
-    }
+    } */
   }
 
   &__title {
@@ -72,6 +68,15 @@ main {
 
 /* Прочее */
 @import "other";
+
+/* Меню */
+@import 'menu';
+
+/* Соц сети */
+@import 'social';
+
+/* Формы */
+@import 'forms';
 
 /* Контент */
 @import "content";
