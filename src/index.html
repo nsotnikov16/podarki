@@ -13,20 +13,28 @@
 			<section class="section background-lightgray">
 				<div class="page__container">
 					<h2 class="section__title">Подарки на <span class="red">новый год</span></h2>
-					<ul class="catalog">
-						<li class="catalog__item">
-							<div class="swiper catalog__swiper">
-								<ul class="labels">
-								</ul>
-								<div class="swiper-wrapper">
-									<a href="#" class="swiper-slide">
-										<img src="./img/items/1.png" alt="#">
-									</a>
-								</div>
-								<div onclick="location.assign('/masters/avelina/')" class="swiper-pagination"></div>
-							</div>
-						</li>
-					</ul>
+					@@include('html/catalog.html',{})
+					<div class="block__all">
+						<a href="#" class="btn btn_all">Перейти в каталог</a>
+					</div>
+				</div>
+			</section>
+			<section class="section background-lightgreen">
+				<div class="page__container">
+					<h2 class="section__title">Подарки на <span class="red">23 февраля</span></h2>
+					@@include('html/catalog.html',{})
+					<div class="block__all">
+						<a href="#" class="btn btn_all">Перейти в каталог</a>
+					</div>
+				</div>
+			</section>
+			<section class="section background-lightred">
+				<div class="page__container">
+					<h2 class="section__title">Подарки на <span class="red">8 марта</span></h2>
+					@@include('html/catalog.html',{})
+					<div class="block__all">
+						<a href="#" class="btn btn_all">Перейти в каталог</a>
+					</div>
 				</div>
 			</section>
 		</main>
