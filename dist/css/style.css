@@ -704,6 +704,7 @@ body {
   width: 100%;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   border: 1px solid rgba(51, 51, 51, 0.15);
   border-radius: 6px;
   padding: 0 3px;
@@ -719,8 +720,14 @@ body {
   font-weight: 400;
   background: rgba(51, 51, 51, 0.07);
 }
+@media (max-width: 660px) {
+  .counter__symbol {
+    width: 14px;
+    height: 14px;
+  }
+}
 .counter input {
-  margin: 0 15px;
+  /* margin: 0 15px; */
   width: 10px;
   text-align: center;
   font-size: 15px;
@@ -728,6 +735,7 @@ body {
 @media (max-width: 660px) {
   .counter input {
     font-size: 10px;
+    /* margin: 0 4px; */
   }
 }
 
@@ -1030,8 +1038,14 @@ body {
 }
 @media (max-width: 660px) {
   .catalog__to-cart {
-    grid-template-columns: 50px 70px;
-    gap: 20px;
+    grid-template-columns: 60px max-content;
+    gap: 10px;
+  }
+}
+@media (max-width: 374px) {
+  .catalog__to-cart {
+    grid-template-columns: max-content;
+    gap: 8px;
   }
 }
 @media (max-width: 660px) {
@@ -1045,10 +1059,19 @@ body {
     padding: 3px;
   }
 }
+@media (max-width: 660px) {
+  .catalog .btn {
+    padding: 10px;
+  }
+}
 @media (max-width: 560px) {
   .catalog .btn {
-    padding: 7px;
     font-size: 9px;
+  }
+}
+@media (max-width: 374px) {
+  .catalog .btn {
+    width: 100%;
   }
 }
 
