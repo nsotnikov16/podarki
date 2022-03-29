@@ -426,10 +426,9 @@ body {
   font-family: "Museo Sans Cyrl";
 }
 
-main {
+/* main {
   margin-bottom: 82px;
-}
-
+} */
 .page {
   color: #333333;
   overflow: hidden;
@@ -437,13 +436,6 @@ main {
 .page__container {
   margin: 0 auto;
   max-width: 1290px;
-  /* @media (max-width: 768px) {
-    padding: 0 40px;
-  }
-
-  @media (max-width: 680px) {
-    padding: 0 15px;
-  } */
 }
 @media (max-width: 1310px) {
   .page__container {
@@ -585,6 +577,38 @@ main {
   transform: rotate(45deg);
 }
 
+.red {
+  color: #E02F2F;
+}
+
+.orange {
+  color: #ffaf35;
+}
+
+.background-lightgray {
+  background-color: #eff6ff;
+}
+
+.background-lightgreen {
+  background-color: #eaf1ee;
+}
+
+.background-lightred {
+  background-color: #fff6f6;
+}
+
+.section {
+  padding: 120px 80px;
+}
+.section__title {
+  font-family: "Tenor Sans";
+  font-weight: 400;
+  font-size: 60px;
+  line-height: 34px;
+  margin-bottom: 56px;
+  text-align: center;
+}
+
 /* Меню */
 .menu {
   display: grid;
@@ -700,25 +724,46 @@ main {
   background-color: #E02F2F;
 }
 .social__wa {
-  background-color: #29A71A;
+  background-color: #29a71a;
 }
 .social__wa svg {
   width: 19px;
   height: 19px;
 }
 .social__vk {
-  background-color: #4169E1;
+  background-color: #4169e1;
 }
 .social__vk svg {
   width: 19px;
   height: 11px;
 }
 .social__viber {
-  background-color: #6F3FAA;
+  background-color: #6f3faa;
 }
 .social__viber svg {
   width: 18px;
   height: 19px;
+}
+.social__message {
+  position: relative;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 15px;
+  padding: 10px;
+  text-align: center;
+  background-color: white;
+  border-radius: 7px;
+  max-width: 113px;
+}
+.social__message::after {
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  top: 40%;
+  left: -3px;
+  transform: rotate(45deg);
 }
 
 /* Формы */
@@ -728,7 +773,7 @@ main {
   border: 1px solid rgba(51, 51, 51, 0.3);
   border-radius: 6px;
 }
-.form__row:hover {
+.form__row:hover, .form__row:focus, .form__row:active {
   border: 1px solid #FFAF35;
 }
 .form__row input {
@@ -971,10 +1016,12 @@ main {
 }
 .header__mobile-bottom {
   position: absolute;
+  z-index: 999;
   top: 100%;
   width: 100%;
   background-color: #e02f2f;
   max-height: 0;
+  overflow: hidden;
   transition: max-height 0.25s ease-in-out;
 }
 .header__mobile-bottom.open {
@@ -1052,11 +1099,11 @@ main {
   margin-bottom: 0;
 }
 .header__mobile-bottom.open .header__mobile-info {
-  margin: 100px 0 50px;
+  margin: 70px 0 50px;
 }
 .header__mobile-bottom.open .header__address {
   display: flex;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   color: white;
 }
 .header__mobile-bottom.open .header__address svg {
@@ -1067,6 +1114,197 @@ main {
 }
 
 /* Подвал */
+.footer {
+  background-color: #333333;
+  padding: 26px 0 46px;
+}
+.footer__top {
+  display: grid;
+  grid-template-columns: max-content 1fr max-content;
+  align-items: center;
+  align-content: center;
+  gap: 30px;
+}
+.footer__logo {
+  background-image: url(../img/logo_footer.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 256px;
+  height: 149px;
+  transform: translateY(-10px);
+}
+.footer__menu {
+  display: flex;
+  justify-content: center;
+}
+.footer__menu ul {
+  display: grid;
+  grid-template-columns: repeat(5, max-content);
+  gap: 10px 35px;
+}
+.footer__menu a {
+  position: relative;
+  color: white;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 20px;
+  white-space: nowrap;
+}
+.footer__menu a:hover::after {
+  content: "";
+  position: absolute;
+  left: -16px;
+  top: -5px;
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 7px;
+  width: 100%;
+  height: 100%;
+  padding: 5px 16px;
+}
+.footer__info > * {
+  margin-bottom: 7px;
+}
+.footer__info > *:last-child {
+  margin-bottom: 0;
+}
+.footer__info .background {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 14px;
+  flex-shrink: 0;
+}
+.footer__phone {
+  color: white;
+  font-weight: 600;
+  font-size: 24px;
+}
+.footer__address {
+  color: white;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 19px;
+}
+.footer__bottom {
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer__copyright {
+  color: #ffffff;
+  opacity: 0.5;
+}
+.footer__politics {
+  color: #ffffff;
+  opacity: 0.5;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.4);
+}
+.footer__politics:hover {
+  color: #E02F2F;
+  opacity: 1;
+  border-bottom: 1px dashed #E02F2F;
+}
+.footer__politics, .footer__copyright {
+  font-weight: 400;
+  font-size: 15px;
+}
+.footer hr {
+  border: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+@media (max-width: 1200px) {
+  .footer__top {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0 30px;
+  }
+  .footer__logo {
+    grid-column: 2/3;
+    justify-self: center;
+  }
+  .footer__menu {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+  .footer__menu ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .footer__info {
+    grid-column: 3/4;
+    justify-self: end;
+  }
+}
+@media (max-width: 900px) {
+  .footer__top {
+    grid-template-columns: 1fr 1fr;
+    align-items: initial;
+    margin-bottom: 35px;
+    justify-items: center;
+  }
+  .footer__logo {
+    grid-column: 1/3;
+  }
+  .footer__menu {
+    grid-row: initial;
+    justify-content: initial;
+  }
+  .footer__info {
+    grid-column: initial;
+  }
+  .footer__bottom {
+    display: grid;
+    grid-template-columns: max-content max-content;
+    gap: 20px;
+  }
+  .footer__social {
+    grid-column: 1/3;
+  }
+}
+@media (max-width: 620px) {
+  .footer__bottom {
+    grid-template-columns: max-content;
+  }
+  .footer__social {
+    grid-column: initial;
+    justify-content: initial;
+    grid-row: 1/2;
+  }
+  .footer__politics {
+    grid-row: 2/3;
+  }
+}
+@media (max-width: 560px) {
+  .footer__top {
+    justify-items: initial;
+    grid-template-columns: 1fr;
+    align-items: center;
+    gap: 35px;
+  }
+  .footer__top > * {
+    grid-column: initial;
+    grid-row: initial;
+  }
+  .footer__logo {
+    transform: translate(0);
+    height: 133px;
+    justify-self: initial;
+  }
+  .footer__info {
+    justify-self: initial;
+  }
+  .footer__menu ul {
+    grid-template-columns: repeat(2, max-content);
+    gap: 25px 35px;
+    margin-left: 10px;
+    width: 90%;
+    justify-content: space-between;
+  }
+}
+
 /* Попапы */
 .popup {
   position: fixed;

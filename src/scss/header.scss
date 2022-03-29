@@ -268,11 +268,15 @@
 
   &__mobile-bottom {
     position: absolute;
+    z-index: 999;
     top: 100%;
     width: 100%;
     background-color: #e02f2f;
     max-height: 0;
+    overflow: hidden;
     transition: max-height 0.25s ease-in-out;
+
+    
     &.open {
       max-height: 1000px;
       display: flex;
@@ -364,12 +368,12 @@
       }
 
       .header__mobile-info {
-        margin: 100px 0 50px;
+        margin: 70px 0 50px;
       }
 
       .header__address {
         display: flex;
-        margin-bottom: 30px;
+        margin-bottom: 20px;
         color: white;
         svg {
           fill: white;

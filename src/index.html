@@ -10,7 +10,25 @@
 		@@include('html/header.html',{})
 
 		<main>
-
+			<section class="section background-lightgray">
+				<div class="page__container">
+					<h2 class="section__title">Подарки на <span class="red">новый год</span></h2>
+					<ul class="catalog">
+						<li class="catalog__item">
+							<div class="swiper catalog__swiper">
+								<ul class="labels">
+								</ul>
+								<div class="swiper-wrapper">
+									<a href="#" class="swiper-slide">
+										<img src="./img/items/1.png" alt="#">
+									</a>
+								</div>
+								<div onclick="location.assign('/masters/avelina/')" class="swiper-pagination"></div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</section>
 		</main>
 		@@include('html/footer.html',{})
 		<div id="signup" class="popup">

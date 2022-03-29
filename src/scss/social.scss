@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    
+
     li {
         margin-right: 15px;
         &:last-child {
@@ -23,7 +23,7 @@
     }
 
     &__wa {
-        background-color: #29A71A;
+        background-color: #29a71a;
         svg {
             width: 19px;
             height: 19px;
@@ -31,7 +31,7 @@
     }
 
     &__vk {
-        background-color: #4169E1;
+        background-color: #4169e1;
         svg {
             width: 19px;
             height: 11px;
@@ -39,10 +39,32 @@
     }
 
     &__viber {
-        background-color: #6F3FAA;
+        background-color: #6f3faa;
         svg {
             width: 18px;
             height: 19px;
+        }
+    }
+
+    &__message {
+        position: relative;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 15px;
+        padding: 10px;
+        text-align: center;
+        background-color: white;
+        border-radius: 7px;
+        max-width: 113px;
+        &::after {
+            position: absolute;
+            content: "";
+            width: 10px;
+            height: 10px;
+            background-color: white;
+            top: 40%;
+            left: -3px;
+            transform: rotate(45deg);
         }
     }
 }

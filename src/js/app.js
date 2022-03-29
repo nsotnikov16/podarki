@@ -31,3 +31,26 @@ const btnSearchClose = header.querySelector('.search__close')
 const headerMobileRight = header.querySelector('.header__mobile-right')
 btnSearchOpen.addEventListener('click', () => headerMobileRight.classList.add('search-open'))
 btnSearchClose.addEventListener('click', () => headerMobileRight.classList.remove('search-open'))
+
+// Свайпер фото подарка
+const swipersCatalog = document.querySelectorAll('.catalog__swiper')
+if (swipersCatalog.length > 0) {
+    swipersCatalog.forEach((swiper, ind) => {
+        swiper.classList.add(`catalog__swiper_${ind + 1}`)
+        var swiperCatalog = new Swiper(`.catalog__swiper_${ind + 1}`, {
+            loop: true,
+            pagination: {
+                el: `.catalog__swiper_${ind + 1} .swiper-pagination`,
+                clickable: true,
+            },
+        })
+        if (window.innerWidth > 1150) {
+            const bullets = swiper.querySelectorAll('.swiper-pagination-bullet')
+            if (bullets.length > 0) bullets.forEach(bullet => {
+                const aria = bullet.getAttribute('aria-label')
+                const nextSlide = aria[aria.length - 1]
+                bullet.addEventListener('mouseenter', () => { swiperCatalog.slideTo(nextSlide) })
+            })
+        }
+    })
+}

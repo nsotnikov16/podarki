@@ -20,9 +20,9 @@ body {
   font-family: "Museo Sans Cyrl";
 }
 
-main {
+/* main {
   margin-bottom: 82px;
-}
+} */
 .page {
   color: $main;
   overflow: hidden;
@@ -34,14 +34,6 @@ main {
     @media (max-width: 1310px) {
       padding: 0 16px;
     }
-
-    /* @media (max-width: 768px) {
-      padding: 0 40px;
-    }
-
-    @media (max-width: 680px) {
-      padding: 0 15px;
-    } */
   }
 
   &__title {

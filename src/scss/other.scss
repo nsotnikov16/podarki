@@ -129,3 +129,33 @@
     }
   }
 }
+
+.red {
+  color: $red;
+}
+
+.orange {
+  color: #ffaf35;
+}
+
+.background-lightgray {
+  background-color: #eff6ff;
+}
+.background-lightgreen {
+  background-color: #eaf1ee;
+}
+.background-lightred {
+  background-color: #fff6f6;
+}
+
+.section {
+  padding: 120px 80px;
+  &__title {
+    font-family: 'Tenor Sans';
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 34px;
+    margin-bottom: 56px;
+    text-align: center;
+  }
+}
