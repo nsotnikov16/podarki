@@ -2,15 +2,14 @@
   @font-face {
     font-family: $font_name;
     font-display: swap;
-    src: url(../fonts/#{$file_name}.woff2) format("woff2"),
-      url(../fonts/#{$file_name}.woff) format("woff");
+    src: url(../fonts/#{$file_name}.woff2) format("woff2"), url(../fonts/#{$file_name}.woff) format("woff");
     font-weight: #{$weight};
     font-style: #{$style};
   }
 }
 
 $main: #333333;
-$red: #E02F2F;
+$red: #e02f2f;
 
 @import "fonts";
 
@@ -57,24 +56,29 @@ body {
   }
 }
 
+/* Контент */
+@import "content";
 
 /* Прочее */
 @import "other";
 
 /* Меню */
-@import 'menu';
+@import "menu";
 
 /* Соц сети */
-@import 'social';
+@import "social";
 
 /* Формы */
-@import 'forms';
+@import "forms";
 
 /* Каталог */
-@import 'catalog';
+@import "catalog";
 
-/* Контент */
-@import "content";
+/* Мы фабрика подарков */
+@import "we";
+
+/* Отзывы и благодарности */
+@import 'reviews';
 
 /* Шапка */
 @import "header";

@@ -1,0 +1,34 @@
+.reviews {
+    max-width: 1250px;
+    @media(max-width: 479px) {
+        width: 100vw;
+    }
+    @media (max-width: 480px) {
+        .swiper-wrapper {
+            max-width: 80%;
+        }
+    }
+
+   
+    &__review {
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    .swiper-scrollbar {
+        position: static;
+        margin-top: 22px;
+        background: white;
+        height: 10px;
+
+        @media (min-width: 768px) {
+            display: none;
+        }
+    }
+
+    .swiper-scrollbar-drag {
+        background: #dbe6f4;
+        border-radius: 50px;
+    }
+}

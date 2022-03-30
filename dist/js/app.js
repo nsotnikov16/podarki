@@ -1,4 +1,3 @@
-
 //Пункты меню каталога
 const header = document.querySelector('.header')
 const catalogBtn = header.querySelector('.header__catalog')
@@ -54,3 +53,95 @@ if (swipersCatalog.length > 0) {
         }
     })
 }
+
+/* Отзывы */
+const swiperReviews = document.querySelector('.swiper.reviews')
+if (swiperReviews) {
+    const reviewsImg = swiperReviews.querySelectorAll('.reviews__review')
+    reviewsImg.forEach(item => item.addEventListener('click', () => window.innerWidth > 480 ? popupsObj['photo'].open(item) : ''))
+
+    new Swiper(swiperReviews, {
+        navigation: {
+            nextEl: ".swiper-button-reviews-next",
+            prevEl: ".swiper-button-reviews-prev",
+        },
+        scrollbar: {
+            el: ".reviews .swiper-scrollbar",
+        },
+
+        breakpoints: {
+            1024: {
+                spaceBetween: 55,
+                slidesPerView: 4,
+            },
+            768: {
+                spaceBetween: 35,
+                slidesPerView: 4,
+
+            },
+
+            480: {
+                slidesPerView: 2,
+                spaceBetween: 30,
+            },
+
+            375: {
+                spaceBetween: 30,
+                slidesPerView: 'auto',
+            },
+
+            320: {
+                spaceBetween: 20,
+                slidesPerView: 'auto',
+            }
+        }
+    })
+}
+
+// Popups
+class Popup {
+    constructor(popupElement) {
+        this._popupElement = popupElement;
+        this._closeButton = this._popupElement.querySelector('.popup__close');
+        this._img = this._popupElement.id === "photo" ? this._popupElement.querySelector('.popup__img') : null;
+        this._handleEscClose = this._handleEscClose.bind(this)
+        this._openingLinks = document.querySelectorAll(`[data-pointer="${this._popupElement.id}"]`)
+        this.setEventListeners()
+    }
+
+    open(el) {
+        if (this._img) this._img.src = el.src
+        document.body.style.overflow = "hidden";
+        this._popupElement.classList.add('popup_opened')
+        document.addEventListener('keydown', this._handleEscClose);
+    }
+
+    close() {
+        if (this._img) this._img.src = ""
+        this._popupElement.classList.remove('popup_opened');
+        document.body.style.overflow = "visible";
+        document.removeEventListener('keydown', this._handleEscClose);
+    }
+
+    _handleEscClose(evt) {
+        if (evt.keyCode === 27) {
+            this.close();
+        }
+    }
+
+    _handleOverlayClick(evt) {
+        if (evt.target === evt.currentTarget) {
+            this.close();
+        }
+    }
+
+    setEventListeners() {
+        this._openingLinks.forEach(link => link.addEventListener('click', (e) => { e.preventDefault(); this.open(e.target) }))
+        this._closeButton.addEventListener('click', () => this.close());
+        this._popupElement.addEventListener('click', this._handleOverlayClick.bind(this));
+    }
+}
+
+const popups = document.querySelectorAll('.popup')
+let popupsObj = {}
+if (popups.length > 0) popups.forEach(item => { popupsObj[item.id] = new Popup(item) })

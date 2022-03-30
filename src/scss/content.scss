@@ -1,0 +1,30 @@
+.content {
+    font-size: 15px;
+    line-height: 30px;
+    font-weight: 400;
+    h3 {
+        font-size: 21px;
+        margin: 40px 0 10px;
+    }
+
+    p {
+        margin-bottom: 22px;
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+
+    @media (max-width: 767px) {
+        font-size: 15px;
+        line-height: 25px;
+
+        h3{ 
+            font-size: 18px;
+            margin: 25px 0 10px;
+        }
+
+        p {
+            margin-bottom: 16px;
+        }
+    }
+}
