@@ -1266,6 +1266,7 @@ body {
 /* Отзывы и благодарности */
 .reviews {
   max-width: 1250px;
+  margin: 0;
 }
 @media (max-width: 479px) {
   .reviews {
