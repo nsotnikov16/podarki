@@ -200,7 +200,6 @@
     .search {
       display: flex;
       width: initial;
-      
     }
     .header__cart {
       display: flex;
@@ -227,7 +226,6 @@
         top: -8px;
         width: 20px;
         height: 20px;
-        
       }
     }
   }
@@ -237,15 +235,18 @@
     align-items: center;
     width: 100%;
     .form {
-        overflow: hidden;
-        width: 100%;
+      overflow: hidden;
+      width: 100%;
     }
     .form__row {
       display: flex;
       background: #ffffff;
-      padding: 8px 16px;
+      padding-right: 16px;
       transition: transform 0.25s ease-in-out;
       transform: translateX(-100%);
+      input {
+        padding: 8px 16px;
+      }
     }
     &.search-open {
       .search {
@@ -276,7 +277,6 @@
     overflow: hidden;
     transition: max-height 0.25s ease-in-out;
 
-    
     &.open {
       max-height: 1000px;
       display: flex;

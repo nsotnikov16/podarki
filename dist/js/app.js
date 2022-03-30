@@ -145,3 +145,9 @@ class Popup {
 const popups = document.querySelectorAll('.popup')
 let popupsObj = {}
 if (popups.length > 0) popups.forEach(item => { popupsObj[item.id] = new Popup(item) })
+
+
+// Mask phone
+$(function () {
+    $("#phone").mask("+7 (999) 999-99-99");
+});

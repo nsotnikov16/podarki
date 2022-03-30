@@ -1290,6 +1290,76 @@
         </div>
     </div>
 </section>
+			<hr style="border: 0; border-bottom: 1px solid rgba(0, 0, 0, 0.1);">
+			<section class="section">
+    <div class="page__container">
+        <h2 class="section__title section__title_left">Поставщики</h2>
+        <div class="suppliers">
+            <p class="suppliers__subtitle">Мы являемся официальными поставщиками таких крупных кондитерских
+                компаний России, как:</p>
+            <ul class="suppliers__list">
+                <li class="suppliers__item">
+                    <img class="suppliers__logo" src="./img/suppliers/1.png" alt="#">
+                </li>
+                <li class="suppliers__item">
+                    <img class="suppliers__logo" src="./img/suppliers/2.png" alt="#">
+                </li>
+                <li class="suppliers__item">
+                    <img class="suppliers__logo" src="./img/suppliers/3.png" alt="#">
+                </li>
+                <li class="suppliers__item">
+                    <img class="suppliers__logo" src="./img/suppliers/4.png" alt="#">
+                </li>
+                <li class="suppliers__item">
+                    <img class="suppliers__logo" src="./img/suppliers/5.png" alt="#">
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+			<section class="section section_faq">
+				<div class="page__container">
+					<form class="form form_faq">
+						<h2 class="form__title">Остались вопросы?</h2>
+						<div class="form__rows">
+							<div class="form__row">
+								<input placeholder="Имя" type="text" minlength="2" >
+							</div>
+							<div class="form__row">
+								<input placeholder="Email*" required type="email" >
+							</div>
+							<div class="form__row">
+								<input  placeholder="Телефон" type="tel" id="phone" >
+							</div>
+							<div class="form__row">
+								<textarea required placeholder="Ваш вопрос*" rows="5"></textarea>
+							</div>
+						</div>
+						<button class="btn">отправить</button>
+						<div class="messengers">
+							<p class="messengers__title">Или напишите нам в мессенджеры</p>
+							<ul class="messengers__list">
+								<li class="messengers__item">
+									<a href="#" class="messengers__link wa">
+										<svg>
+											<use href="./img/icons/icons.svg#whatsapp"></use>
+										</svg>
+										<span>
+											Написать в WhatsApp
+										</span> </a>
+								</li>
+								<li class="messengers__item">
+									<a href="#" class="messengers__link viber">
+										<svg>
+											<use href="./img/icons/icons.svg#viber"></use>
+										</svg>
+										<span>Написать в Viber</span></a>
+								</li>
+							</ul>
+						</div>
+					</form>
+				</div>
+			</section>
 		</main>
 		<footer class="footer">
     <div class="page__container">
@@ -1367,10 +1437,21 @@
 			</div>
 		</div>
 
+		<div id="thanks" class="popup">
+			<div class="popup__container">
+				<div class="popup__content">
+					<p  class="thanks">Ваш вопрос отправлен успешно! <br> Мы с вами свяжемся в ближайшее время!</p>
+				</div>
+				<button class="popup__close">✖</button>
+			</div>
+		</div>
+
+
 	</div>
-	<script src="js/jquery-3.6.0.min.js"></script>
-	<script src="js/swiper-bundle.min.js"></script>
-	<script src="js/app.js"></script>
+	<script src="./js/jquery-3.6.0.min.js"></script>
+	<script src="./js/jquery.maskedinput.min.js"></script>
+	<script src="./js/swiper-bundle.min.js"></script>
+	<script src="./js/app.js"></script>
 </body>
 
 </html>
