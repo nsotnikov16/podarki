@@ -43,38 +43,17 @@
 					@@include('html/we.html', {})
 				</div>
 			</section>
-			<section class="section">
-				<div class="page__container">
-					<div style="max-width: 1250px;" class="section__with-arrows">
-						<h2 class="section__title section__title_left">Отзывы и благодарности</h2>
-						<div class="section__arrows">
-							<button class="arrow arrow_left swiper-button-reviews-prev "></button>
-							<button class="arrow arrow_right swiper-button-reviews-next"></button>
-						</div>
-					</div>
-					<div class="swiper reviews">
-						<div class="swiper-wrapper">
-							<img src="./img/reviews/1.png" alt="#" class="swiper-slide reviews__review">
-							<img src="./img/reviews/2.png" alt="#" class="swiper-slide reviews__review">
-							<img src="./img/reviews/3.png" alt="#" class="swiper-slide reviews__review">
-							<img src="./img/reviews/4.png" alt="#" class="swiper-slide reviews__review">
-							<img src="./img/reviews/4.png" alt="#" class="swiper-slide reviews__review">
-						</div>
-						<div class="swiper-scrollbar"></div>
-					</div>
+			@@include('html/reviews.html',{})
+		</main>
+		@@include('html/footer.html',{})
+		<div id="photo" class="popup">
+			<div class="popup__container">
+				<div class="popup__content">
+					<img src="" alt="Image" class="popup__img">
 				</div>
-	</div>
-	</section>
-	</main>
-	@@include('html/footer.html',{})
-	<div id="photo" class="popup">
-		<div class="popup__container">
-			<div class="popup__content">
-				<img src="" alt="Image" class="popup__img">
+				<button class="popup__close">✖</button>
 			</div>
-			<button class="popup__close">✖</button>
 		</div>
-	</div>
 
 	</div>
 	<script src="js/jquery-3.6.0.min.js"></script>

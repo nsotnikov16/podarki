@@ -581,6 +581,14 @@ body {
 .btn_all:hover {
   color: white;
 }
+@media (max-width: 1024px) {
+  .btn_all {
+    margin: 30px auto 0;
+    padding: 18px 25px;
+    font-size: 15px;
+    line-height: 18px;
+  }
+}
 .btn_catalog {
   background: #ffaf35;
   justify-content: flex-start;
