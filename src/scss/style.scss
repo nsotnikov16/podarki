@@ -71,13 +71,19 @@ body {
 @import "menu";
 
 /* Меню (левое) */
-@import 'left-menu';
+@import "left-menu";
 
 /* Фильтр */
-@import 'filter';
+@import "filter";
+
+/* Селекты */
+@import "selects";
+
+/* Пагинация */
+@import "pagination";
 
 /* Контейнер каталога */
-@import 'container-catalog';
+@import "container-catalog";
 
 /* Соц сети */
 @import "social";

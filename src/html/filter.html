@@ -1,0 +1,55 @@
+<form action="" class="filter">
+    <h3 class="filter__title">Фильтр</h3>
+    <div class="filter__price filter__block">
+        <p class="filter__subtitle">Цена, руб.</p>
+        <div class="filter__price-inputs">
+            <input class="min-price" autocomplete="off" value="500" name type="text">
+            <input class="max-price" autocomplete="off" value='2500' name type="text">
+        </div>
+        <div class="filter__price-track">
+            <div class="filter__pricebar VD"></div>
+            <div class="filter__pricebar VN"></div>
+            <!-- <div class="filter__pricebar_V"></div> -->
+            <div class="filter__pricerange">
+                <a href="" class="left"></a>
+                <a href="" class="right"></a>
+            </div>
+            <a href="" style="display: none;" class="filter__result btn">Показать 100</a>
+        </div>
+    </div>
+    <div class="filter__block">
+        <p class="filter__subtitle">Вес подарка, гр.</p>
+        <ul class="filter__checkboxs">
+            <li>
+                <input type="checkbox" name="" id="ch1">
+                <label for="ch1">100</label>
+
+            </li>
+            <li>
+                <input type="checkbox" checked name="" id="ch2">
+                <label class="active" for="ch2">250</label>
+            </li>
+            <li>
+                <input type="checkbox" checked name="" id="ch3">
+                <label class="active" for="ch3">300</label>
+            </li>
+            <li>
+                <input type="checkbox" name="" id="ch4">
+                <label class="disabled" for="ch4">500</label>
+            </li>
+            <li>
+                <input type="checkbox" name="" id="ch5">
+                <label class="disabled" for="ch5">1000</label>
+            </li>
+        </ul>
+    </div>
+    <div class="filter__block">
+        <p class="filter__subtitle">Товары со скидкой</p>
+        <ul class="filter__checkboxs">
+            <li>
+                <input type="checkbox" name="" id="ch6">
+                <label for="ch6">Да</label>
+            </li>
+        </ul>
+    </div>
+</form>

@@ -1,6 +1,6 @@
 .popup {
   position: fixed;
-  z-index: 999999999999;
+  z-index: -1;
   top: 0;
   left: 0;
   right: 0;
@@ -17,6 +17,7 @@
     opacity: 1;
     visibility: visible;
     transition: all 0.3s ease;
+    z-index: 999999999999;
   }
 
   &__container {

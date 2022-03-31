@@ -31,6 +31,8 @@ const headerMobileRight = header.querySelector('.header__mobile-right')
 btnSearchOpen.addEventListener('click', () => headerMobileRight.classList.add('search-open'))
 btnSearchClose.addEventListener('click', () => headerMobileRight.classList.remove('search-open'))
 
+
+const catalog = document.querySelector('.catalog')
 // Свайпер фото подарка
 const swipersCatalog = document.querySelectorAll('.catalog__swiper')
 if (swipersCatalog.length > 0) {
@@ -151,3 +153,88 @@ if (popups.length > 0) popups.forEach(item => { popupsObj[item.id] = new Popup(i
 $(function () {
     $("#phone").mask("+7 (999) 999-99-99");
 });
+
+// Левое меню
+const leftDropdowns = document.querySelectorAll('.left-menu__dropdown')
+if (leftDropdowns.length > 0) {
+    leftDropdowns.forEach(item => {
+        item.addEventListener('click', () => {
+            item.classList.toggle('open')
+            leftDropdowns.forEach(el => el !== item ? el.classList.remove('open') : '')
+        })
+    })
+}
+
+// Селекты
+const selects = document.querySelectorAll('.select')
+if (selects.length > 0) {
+    selects.forEach((select, ind) => {
+        let selectName
+        const editTextButton = (link, flug) => {
+            selectBtn.textContent = selectName = link.textContent
+            selectLinks.forEach(link => link.textContent === selectName ? link.parentNode.style.display = 'none' : link.parentNode.style.display = 'inline')
+        }
+        const selectBtn = select.querySelector('.select__btn')
+        const selectLinks = select.querySelectorAll('.select__option a')
+        if (selectLinks.length > 0) {
+            selectLinks.forEach((item, ind) => {
+                ind == 0 ? editTextButton(item, true) : ''
+                selectBtn.textContent = selectName
+                item.addEventListener('click', () => editTextButton(item))
+            })
+        }
+        select.classList.add(`select_${ind}`)
+        select.addEventListener('click', () => select.classList.toggle('open'))
+        document.addEventListener('click', ({ target }) => {
+            if (select.classList.contains('open') && !target.closest(`.select_${ind}`)) {
+                select.classList.remove('open')
+            }
+        })
+    })
+}
+
+
+// Перенос фильтра или меню в модалку на брейкпоинте
+
+let mobile
+const filter = document.querySelector('.filter')
+const leftMenu = document.querySelector('.left-menu')
+const aside = document.querySelector('.left-block');
+
+
+function mobileView() {
+    aside.style.display = 'none';
+    if (mobile) {
+        Array.from([filter, leftMenu]).forEach(item => transferElement(item))
+    }
+}
+
+function desktopView() {
+    aside.style.display = 'grid';
+    if (!mobile) {
+        Array.from([filter, leftMenu]).forEach(item => transferElement(item))
+    }
+}
+
+function transferElement(element) {
+    if (element) {
+        if (mobile) {
+            document.querySelector(`#${element.className} .popup__content`).append(element)
+        } else {
+            aside.append(element)
+        }
+    }
+}
+
+window.innerWidth <= 1000 ? mobile = true : mobile = false
+mobile ? mobileView() : desktopView()
+window.addEventListener('resize', () => {
+
+    if (window.innerWidth <= 1000) {
+        mobile = true
+        mobileView()
+    } else {
+        mobile = false
+        desktopView()
+    }
+})

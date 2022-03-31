@@ -165,4 +165,11 @@
       width: 100%;
     }
   }
+
+  &__counter {
+    font-size: 15px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+  }
 }

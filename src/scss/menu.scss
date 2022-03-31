@@ -27,6 +27,7 @@
         .menu__expand {
           opacity: 1;
           visibility: visible;
+          
         }
 
         &::after {
@@ -67,6 +68,7 @@
   @media (min-width: 1101px) {
     &__expand {
       padding-top: 10px;
+      z-index: 1;
       position: absolute;
       width: 100%;
       opacity: 0;

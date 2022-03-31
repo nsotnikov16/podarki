@@ -36,6 +36,8 @@
       height: 40px;
       width: 100%;
       max-width: 85px;
+      font-size: 17px;
+      line-height: 20px;
       &:focus {
         border: 1px solid #ffaf35;
       }
@@ -43,6 +45,7 @@
   }
 
   &__price-track {
+    position: relative;
   }
 
   &__pricebar {
@@ -52,12 +55,18 @@
     width: 100%;
     &.VN {
       background: #ffaf35;
+      position: absolute;
+      width: 50%;
+      top: 0;
+      left: 30%;
     }
     &.VD {
     }
   }
 
   &__pricerange {
+    top: -5px;
+    left: 30%;
     position: absolute;
     display: flex;
     align-items: center;
@@ -66,18 +75,46 @@
     a {
       width: 20px;
       height: 20px;
-      border: 2px solid white;
+      border: 3px solid white;
       background-color: #ffaf35;
       border-radius: 50%;
     }
   }
 
   &__result {
+    position: absolute;
+    top: -300%;
+    right: -160px;
+    z-index: 2;
+    &:hover {
+      &::before {
+        background-color: #bc1616;
+      }
+    }
+    &::before {
+      content: "";
+      width: 10px;
+      height: 10px;
+      background-color: $red;
+      margin-left: -5px;
+      transform: rotate(45deg) translate(-11px, 11px);
+      z-index: 1;
+    }
   }
 
   &__checkboxs {
     input {
       display: none;
+
+      &:checked ~ label:not(.filter__checkboxs label.disabled) {
+        &::before {
+          background-color: $red;
+          background-image: url(../img/checkbox.svg);
+          background-size: 9px 7px;
+          background-position: center;
+          background-repeat: no-repeat;
+        }
+      }
     }
     li {
       margin-bottom: 10px;
@@ -109,15 +146,6 @@
         margin-right: 7px;
       }
 
-      &.active {
-        &::before {
-          background-color: $red;
-          background-image: url(../img/checkbox.svg);
-          background-size: 9px 7px;
-          background-position: center;
-          background-repeat: no-repeat;
-        }
-      }
       &.disabled {
         cursor: not-allowed;
         opacity: 0.3;
@@ -129,8 +157,5 @@
         }
       }
     }
-  }
-
-  &__open-btn {
   }
 }
