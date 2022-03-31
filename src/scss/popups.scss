@@ -11,8 +11,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /* background: rgba(17,24,39, 0.5);  */
-  background: rgba(255, 255, 255, 0.75);
+  background: rgba(51, 51, 51, 0.75);
   &.popup_opened {
     opacity: 1;
     visibility: visible;
@@ -28,12 +27,16 @@
   &__close {
     position: absolute;
     top: -25px;
-    right: -20px;
+    right: -15px;
     font-size: 25px;
     font-weight: 300;
     color: $red;
     &:hover {
       color: #ffaf35;
+    }
+
+    @media(max-width: 375px) {
+      right: 0;
     }
   }
 
@@ -50,5 +53,23 @@
     @media (max-width: 768px) {
       max-width: 85vw;
     }
+  }
+
+
+  .filter, .left-menu .left-menu__list {
+
+    overflow: auto;
+    max-height: 80vh;
+    @media(max-width: 1000px) and (min-width: 560px) {
+      width: 75vw;
+    }
+  }
+
+  .left-menu {
+    padding: 10px;
+  }
+
+  .filter {
+    min-width: 300px;
   }
 }

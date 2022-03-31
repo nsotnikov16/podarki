@@ -32,6 +32,8 @@ btnSearchOpen.addEventListener('click', () => headerMobileRight.classList.add('s
 btnSearchClose.addEventListener('click', () => headerMobileRight.classList.remove('search-open'))
 
 
+
+
 const catalog = document.querySelector('.catalog')
 // Свайпер фото подарка
 const swipersCatalog = document.querySelectorAll('.catalog__swiper')
@@ -171,15 +173,16 @@ if (selects.length > 0) {
     selects.forEach((select, ind) => {
         let selectName
         const editTextButton = (link, flug) => {
-            selectBtn.textContent = selectName = link.textContent
-            selectLinks.forEach(link => link.textContent === selectName ? link.parentNode.style.display = 'none' : link.parentNode.style.display = 'inline')
+            selectName = link.textContent
+            selectBtn.innerHTML = `${selectName}<span></span>`
+            selectLinks.forEach(link => link.textContent === selectName ? link.parentNode.style.display = 'none' : link.parentNode.style.display = 'block')
         }
         const selectBtn = select.querySelector('.select__btn')
         const selectLinks = select.querySelectorAll('.select__option a')
         if (selectLinks.length > 0) {
             selectLinks.forEach((item, ind) => {
                 ind == 0 ? editTextButton(item, true) : ''
-                selectBtn.textContent = selectName
+                selectBtn.innerHTML = `${selectName}<span></span>`
                 item.addEventListener('click', () => editTextButton(item))
             })
         }
@@ -200,7 +203,6 @@ let mobile
 const filter = document.querySelector('.filter')
 const leftMenu = document.querySelector('.left-menu')
 const aside = document.querySelector('.left-block');
-
 
 function mobileView() {
     aside.style.display = 'none';
@@ -225,16 +227,86 @@ function transferElement(element) {
         }
     }
 }
+if (aside) {
+    window.innerWidth <= 1000 ? mobile = true : mobile = false
+    mobile ? mobileView() : desktopView()
+    window.addEventListener('resize', () => {
 
-window.innerWidth <= 1000 ? mobile = true : mobile = false
-mobile ? mobileView() : desktopView()
-window.addEventListener('resize', () => {
+        if (window.innerWidth <= 1000) {
+            mobile = true
+            mobileView()
+        } else {
+            mobile = false
+            desktopView()
+        }
+    })
+}
 
-    if (window.innerWidth <= 1000) {
-        mobile = true
-        mobileView()
-    } else {
-        mobile = false
-        desktopView()
-    }
-})
+
+
+// "Самые популярные"
+const swiperPopular = document.querySelector('.swiper.popular')
+if (swiperPopular) {
+    var swiper = new Swiper(swiperPopular, {
+        navigation: {
+            nextEl: ".swiper-button-popular-next",
+            prevEl: ".swiper-button-popular-prev",
+        },
+        scrollbar: {
+            el: ".popular .swiper-scrollbar",
+        },
+
+        spaceBetween: 30,
+        breakpoints: {
+            1290: {
+                width: null,
+                slidesPerView: 4
+            },
+            480: {
+                spaceBetween: 30,
+                width: 300
+            },
+            320: {
+                spaceBetween: 16,
+                slidesPerView: 'auto',
+            }
+        },
+    })
+}
+
+const inputs = document.querySelectorAll('.form__row input')
+const forms = document.querySelectorAll('.form')
+function hasInvalidInput(elements) {
+    return elements.some((element) => ['INPUT', 'TEXTAREA'].includes(element.tagName) ? !element.validity.valid : '');
+}
+
+if (forms.length > 0) {
+    forms.forEach(form => {
+        const elements = Array.from(form.elements)
+        const button = form.querySelector('button')
+        const phone = form.querySelector('#phone')
+        if (elements.length > 0) {
+            elements.forEach(item => {
+                if (['INPUT', 'TEXTAREA'].includes(item.tagName)) {
+                    item.addEventListener('focus', () => {
+                        item.parentNode.style.border = '1px solid #ffaf35'
+                    })
+                    item.addEventListener('focusout', () => {
+                        item.parentNode.style.border = ''
+                    })
+
+                    item.addEventListener('input', () => {
+                        const phoneInvalid = phone.value.includes('_') || phone.value == '' || !phone.value
+                        console.log(phone.value)
+                        if (hasInvalidInput(elements) && (phone.required ? phoneInvalid : true)) {
+                            button.disabled = true
+                        } else {
+                            button.disabled = false
+                        }
+                    })
+                }
+            })
+        }
+
+    })
+}
