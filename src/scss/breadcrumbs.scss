@@ -1,0 +1,45 @@
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  overflow: auto;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+  li {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    &:last-child {
+      margin-right: 0;
+      &::after {
+        content: initial;
+      }
+    }
+
+    &::after {
+      content: "";
+      width: 4px;
+      height: 4px;
+      background-color: #333333;
+      border-radius: 50%;
+      margin-left: 19px;
+    }
+  }
+
+  a,
+  p {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+    white-space: nowrap;
+  }
+
+  a {
+    &:hover {
+      color: $red;
+    }
+  }
+
+  p {
+      opacity: 0.6;
+  }
+}

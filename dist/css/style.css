@@ -443,23 +443,23 @@ body {
   }
 }
 .page__title {
-  font-size: 54px;
-  line-height: 88px;
-  text-align: center;
-  text-transform: uppercase;
-  font-family: "Prata";
   font-weight: 400;
-  margin: 0 auto 25px;
+  font-size: 60px;
+  line-height: 64px;
+  font-family: "Tenor Sans";
   word-wrap: break-word;
   /* @media (max-width: 580px) {
     text-align: left;
   } */
 }
-@media (max-width: 1220px) {
+@media (max-width: 1290px) {
   .page__title {
-    font-size: calc(48px + 10.2 * (100vw - 375px) / 1220);
-    line-height: calc(60px + 30.6 * (100vw - 375px) / 1220);
+    font-size: calc(48px + 20.4 * (100vw - 375px) / 1290);
+    line-height: calc(53px + 18.7 * (100vw - 375px) / 1290);
   }
+}
+.page__top {
+  padding: 38px 0 20px;
 }
 
 /* Контент */
@@ -649,6 +649,10 @@ body {
 
 .background-lightred {
   background-color: #fff6f6;
+}
+
+.background-white {
+  background-color: white;
 }
 
 .section {
@@ -939,7 +943,48 @@ body {
   }
 }
 
-/* Меню */
+/* Хлебные крошки */
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  overflow: auto;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+}
+.breadcrumbs li {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+.breadcrumbs li:last-child {
+  margin-right: 0;
+}
+.breadcrumbs li:last-child::after {
+  content: initial;
+}
+.breadcrumbs li::after {
+  content: "";
+  width: 4px;
+  height: 4px;
+  background-color: #333333;
+  border-radius: 50%;
+  margin-left: 19px;
+}
+.breadcrumbs a,
+.breadcrumbs p {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+  white-space: nowrap;
+}
+.breadcrumbs a:hover {
+  color: #e02f2f;
+}
+.breadcrumbs p {
+  opacity: 0.6;
+}
+
+/* Меню (топ, низ) */
 .menu {
   display: grid;
   grid-template-columns: repeat(5, max-content);
@@ -1028,6 +1073,134 @@ body {
   .menu__list-dropdown a:hover {
     color: #bc1616;
   }
+}
+
+/* Меню (левое) */
+.left-menu {
+  background-color: white;
+  padding: 30px;
+  border-radius: 15px;
+}
+
+/* Фильтр */
+.filter {
+  background-color: white;
+  padding: 30px;
+  border-radius: 15px;
+}
+.filter__title {
+  font-weight: 600;
+  font-size: 21px;
+  line-height: 25px;
+  margin-bottom: 24px;
+}
+.filter__subtitle {
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 18px;
+  margin-bottom: 13px;
+}
+.filter__block {
+  margin-bottom: 34px;
+}
+.filter__price-inputs {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+.filter__price-inputs input {
+  border: 1px solid rgba(51, 51, 51, 0.3);
+  border-radius: 6px;
+  text-align: center;
+  height: 40px;
+  width: 100%;
+  max-width: 85px;
+}
+.filter__price-inputs input:focus {
+  border: 1px solid #ffaf35;
+}
+.filter__pricebar {
+  background: rgba(255, 175, 53, 0.25);
+  border-radius: 50px;
+  height: 7px;
+  width: 100%;
+}
+.filter__pricebar.VN {
+  background: #ffaf35;
+}
+.filter__pricerange {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 50%;
+}
+.filter__pricerange a {
+  width: 20px;
+  height: 20px;
+  border: 2px solid white;
+  background-color: #ffaf35;
+  border-radius: 50%;
+}
+.filter__checkboxs input {
+  display: none;
+}
+.filter__checkboxs li {
+  margin-bottom: 10px;
+}
+.filter__checkboxs li:last-child {
+  margin-bottom: 0;
+}
+.filter__checkboxs label {
+  font-size: 15px;
+  line-height: 18px;
+  display: flex;
+  align-items: center;
+}
+.filter__checkboxs label:hover {
+  cursor: pointer;
+  color: #ffaf35;
+}
+.filter__checkboxs label:hover::before {
+  border: 1px solid #ffaf35;
+}
+.filter__checkboxs label::before {
+  content: "";
+  width: 15px;
+  height: 15px;
+  border: 1px solid #e02f2f;
+  border-radius: 4px;
+  margin-right: 7px;
+}
+.filter__checkboxs label.active::before {
+  background-color: #e02f2f;
+  background-image: url(../img/checkbox.svg);
+  background-size: 9px 7px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.filter__checkboxs label.disabled {
+  cursor: not-allowed;
+  opacity: 0.3;
+}
+.filter__checkboxs label.disabled::before {
+  border: 1px solid #333333;
+}
+.filter__checkboxs label.disabled:hover {
+  color: inherit;
+}
+/* Контейнер каталога */
+.container-catalog {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 70px;
+}
+
+.left-block {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
 }
 
 /* Соц сети */

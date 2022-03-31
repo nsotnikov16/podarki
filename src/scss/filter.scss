@@ -1,0 +1,136 @@
+.filter {
+  background-color: white;
+  padding: 30px;
+  border-radius: 15px;
+
+  &__title {
+    font-weight: 600;
+    font-size: 21px;
+    line-height: 25px;
+    margin-bottom: 24px;
+  }
+
+  &__subtitle {
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 18px;
+    margin-bottom: 13px;
+  }
+
+  &__block {
+    margin-bottom: 34px;
+  }
+
+  &__price {
+  }
+
+  &__price-inputs {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    input {
+      border: 1px solid rgba(51, 51, 51, 0.3);
+      border-radius: 6px;
+      text-align: center;
+      height: 40px;
+      width: 100%;
+      max-width: 85px;
+      &:focus {
+        border: 1px solid #ffaf35;
+      }
+    }
+  }
+
+  &__price-track {
+  }
+
+  &__pricebar {
+    background: rgba(255, 175, 53, 0.25);
+    border-radius: 50px;
+    height: 7px;
+    width: 100%;
+    &.VN {
+      background: #ffaf35;
+    }
+    &.VD {
+    }
+  }
+
+  &__pricerange {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 50%;
+    a {
+      width: 20px;
+      height: 20px;
+      border: 2px solid white;
+      background-color: #ffaf35;
+      border-radius: 50%;
+    }
+  }
+
+  &__result {
+  }
+
+  &__checkboxs {
+    input {
+      display: none;
+    }
+    li {
+      margin-bottom: 10px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    label {
+      font-size: 15px;
+      line-height: 18px;
+      display: flex;
+      align-items: center;
+
+      &:hover {
+        cursor: pointer;
+        color: #ffaf35;
+        &::before {
+          border: 1px solid #ffaf35;
+        }
+      }
+      &::before {
+        content: "";
+        width: 15px;
+        height: 15px;
+        border: 1px solid $red;
+        border-radius: 4px;
+        margin-right: 7px;
+      }
+
+      &.active {
+        &::before {
+          background-color: $red;
+          background-image: url(../img/checkbox.svg);
+          background-size: 9px 7px;
+          background-position: center;
+          background-repeat: no-repeat;
+        }
+      }
+      &.disabled {
+        cursor: not-allowed;
+        opacity: 0.3;
+        &::before {
+          border: 1px solid #333333;
+        }
+        &:hover {
+          color: inherit;
+        }
+      }
+    }
+  }
+
+  &__open-btn {
+  }
+}

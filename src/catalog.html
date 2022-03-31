@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/head.html',{
+"title":"Каталог"
+})
+
+<body>
+    <div class="page background-lightgray">
+
+        @@include('html/header.html',{})
+        <div class="page__top">
+            <div class="page__container">
+                @@include('html/breadcrumbs.html', {})
+                <h1 class="page__title">Подарки на <span class="red">новый год</span></h1>
+            </div>
+        </div>
+        <main>
+            <div class="page__container container-catalog">
+                <aside class="left-block">
+                    <form action="" class="filter">
+                        <h3 class="filter__title">Фильтр</h3>
+                        <div class="filter__price filter__block">
+                            <p class="filter__subtitle">Цена, руб.</p>
+                            <div class="filter__price-inputs">
+                                <input class="min-price" autocomplete="off" name type="text">
+                                <input class="max-price" autocomplete="off" name type="text">
+                            </div>
+                            <div class="filter__price-track">
+                                <div class="filter__pricebar VD"></div>
+                                <div class="filter__pricebar VN"></div>
+                                <!-- <div class="filter__pricebar_V"></div> -->
+                                <div class="filter__pricerange">
+                                    <a href="" class="left"></a>
+                                    <a href="" class="right"></a>
+                                </div>
+                                <a href="" class="filter__result">Показать 100</a>
+                            </div>
+                        </div>
+                        <div class="filter__block">
+                            <p class="filter__subtitle">Вес подарка, гр.</p>
+                            <ul class="filter__checkboxs">
+                                <li>
+                                    <label for="ch1">100</label>
+                                    <input type="checkbox" name="" id="ch1">
+                                </li>
+                                <li>
+                                    <label class="active" for="ch2">250</label>
+                                    <input type="checkbox" name="" id="ch2">
+                                </li>
+                                <li>
+                                    <label class="active" for="ch3">300</label>
+                                    <input type="checkbox" name="" id="ch3">
+                                </li>
+                                <li>
+                                    <label class="disabled" for="ch4">500</label>
+                                    <input type="checkbox" name="" id="ch4">
+                                </li>
+                                <li>
+                                    <label class="disabled" for="ch5">1000</label>
+                                    <input type="checkbox" name="" id="ch5">
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="filter__block">
+                            <p class="filter__subtitle">Товары со скидкой</p>
+                            <ul class="filter__checkboxs">
+                                <li>
+                                    <label for="ch6">Да</label>
+                                    <input type="checkbox" name="" id="ch6">
+                                </li>
+                            </ul>
+                        </div>
+                    </form>
+                    <ul class="left-menu">
+                        <li class="left-menu__dropdown">
+                            <a>Подарки на 23 февраля</a>
+                            <ul>
+                                <li><a href="">Дерево</a></li>
+                                <li><a href="">Дерево/Кожа</a></li>
+                                <li><a href="">Детские сады и школы</a></li>
+                                <li><a href="">Жесть</a></li>
+                                <li><a href="">Индивидуальные разработки</a></li>
+                                <li><a href="">Картон</a></li>
+                                <li><a href="">Кондитерские изделия</a></li>
+                                <li><a href="">Мешочки</a></li>
+                                <li><a href="">Переплетный картон</a></li>
+                                <li><a href="">Подарочные наборы взрослые</a></li>
+                                <li><a href="">Подарочные наборы детские</a></li>
+                                <li><a href="">Развивающие игры</a></li>
+                                <li><a href="">Символ года текстиль</a></li>
+                                <li><a href="">Сказочные пряники</a></li>
+                                <li><a href="">Сумки/Пакеты</a></li>
+                                <li><a href="">Текстиль</a></li>
+                            </ul>
+                        </li>
+                        <li class="left-menu__dropdown">
+                            <a>Подарки на 8 марта</a>
+                            <ul>
+                                <li><a href="">Дерево</a></li>
+                                <li><a href="">Дерево/Кожа</a></li>
+                                <li><a href="">Детские сады и школы</a></li>
+                                <li><a href="">Жесть</a></li>
+                                <li><a href="">Индивидуальные разработки</a></li>
+                                <li><a href="">Картон</a></li>
+                                <li><a href="">Кондитерские изделия</a></li>
+                                <li><a href="">Мешочки</a></li>
+                                <li><a href="">Переплетный картон</a></li>
+                                <li><a href="">Подарочные наборы взрослые</a></li>
+                                <li><a href="">Подарочные наборы детские</a></li>
+                                <li><a href="">Развивающие игры</a></li>
+                                <li><a href="">Символ года текстиль</a></li>
+                                <li><a href="">Сказочные пряники</a></li>
+                                <li><a href="">Сумки/Пакеты</a></li>
+                                <li><a href="">Текстиль</a></li>
+                            </ul>
+                        </li>
+                        <li class="left-menu__dropdown">
+                            <a>Подарки на НГ</a>
+                            <ul>
+                                <li><a href="">Дерево</a></li>
+                                <li><a href="">Дерево/Кожа</a></li>
+                                <li><a href="">Детские сады и школы</a></li>
+                                <li><a href="">Жесть</a></li>
+                                <li><a href="">Индивидуальные разработки</a></li>
+                                <li><a href="">Картон</a></li>
+                                <li><a href="">Кондитерские изделия</a></li>
+                                <li><a href="">Мешочки</a></li>
+                                <li><a href="">Переплетный картон</a></li>
+                                <li><a href="">Подарочные наборы взрослые</a></li>
+                                <li><a href="">Подарочные наборы детские</a></li>
+                                <li><a href="">Развивающие игры</a></li>
+                                <li><a href="">Символ года текстиль</a></li>
+                                <li><a href="">Сказочные пряники</a></li>
+                                <li><a href="">Сумки/Пакеты</a></li>
+                                <li><a href="">Текстиль</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">Прочие подарки</a>
+                        </li>
+                    </ul>
+                </aside>
+                <div class="right-block">
+                    <p class="catalog__counter"><b>250 подарков</b> найдено</p>
+                    <div class="selects">
+                        <button class="filter__open-btn">Фильтр</button>
+                        <div class="select">
+                            <button class="select__btn">Сначала дорогие</button>
+                            <ul class="select__list">
+                                <li class="select__option">
+                                    <a href="№">Сначала дорогие</a>
+                                </li>
+                                <li class="select__option">
+                                    <a href="№">Сначала дешевые</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="select">
+                            <button class="select__btn">Показать по 25</button>
+                            <ul class="select__list">
+                                <li class="select__option">
+                                    <a href="№">Показать по 25</a>
+                                </li>
+                                <li class="select__option">
+                                    <a href="№">Показать по 50</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <ul class="catalog">
+
+                    </ul>
+                    <div class="pagination">
+                        <a href="" class="pagination__prev"></a>
+                        <div class="pagination__numbers">
+                            <a href="">1</a>
+                            <a href="">2</a>
+                            <a href="">3</a>
+                            <a href="">4</a>
+                        </div>
+                        <a href="" class="pagintaion__next"></a>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+        @@include('html/footer.html',{})
+        <div id="photo" class="popup">
+            <div class="popup__container">
+                <div class="popup__content">
+                    <img src="" alt="Image" class="popup__img">
+                </div>
+                <button class="popup__close">✖</button>
+            </div>
+        </div>
+
+        <div id="thanks" class="popup">
+            <div class="popup__container">
+                <div class="popup__content">
+                    <p class="thanks">Ваш вопрос отправлен успешно! <br> Мы с вами свяжемся в ближайшее время!</p>
+                </div>
+                <button class="popup__close">✖</button>
+            </div>
+        </div>
+
+
+    </div>
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script src="./js/jquery.maskedinput.min.js"></script>
+    <script src="./js/swiper-bundle.min.js"></script>
+    <script src="./js/app.js"></script>
+</body>
+
+</html>
