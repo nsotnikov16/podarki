@@ -7,60 +7,59 @@
 <body>
     <div class="page background-lightgray">
         @@include('html/header.html',{})
-        <div class="page__top">
+        <div class="page__top page__top_new-year">
             <div class="page__container">
                 @@include('html/breadcrumbs.html', {})
                 <h1 class="page__title">Подарки на <span class="red">новый год</span></h1>
             </div>
         </div>
         <main>
-            <div class="page__container container-grid container-grid_catalog">
-                <aside class="left-block">
-                    @@include('html/filter.html', {})
-                    @@include('html/left-menu.html', {})
-                </aside>
-                <div class="right-block">
-                    <p class="catalog__counter"><span><b>250 подарков</b> найдено</span></p>
-                    <div class="selects">
-                        <button data-pointer="filter" class="select select_empty"><b>Фильтр</b></button>
-                        <button data-pointer="left-menu" class="select select_empty"><b>Все подарки</b></button>
-                        <div class="select">
-                            <button class="select__btn"></button>
-                            <ul class="select__list">
-                                <li class="select__option">
-                                    <a href="#">Сначала дорогие</a>
-                                </li>
-                                <li class="select__option">
-                                    <a href="#">Сначала дешевые</a>
-                                </li>
-                            </ul>
+            <div class="page__container">
+
+
+                <div class=" container-grid container-grid_catalog">
+                    <aside class="left-block">
+                        @@include('html/filter.html', {})
+                        @@include('html/left-menu.html', {})
+                    </aside>
+                    <div class="right-block">
+                        <p class="catalog__counter"><span><b>250 подарков</b> найдено</span></p>
+                        <div class="selects">
+                            <button data-pointer="filter" class="select select_empty"><b>Фильтр</b></button>
+                            <button data-pointer="left-menu" class="select select_empty"><b>Другие подарки</b></button>
+                            <div class="select">
+                                <button class="select__btn"></button>
+                                <ul class="select__list">
+                                    <li class="select__option">
+                                        <a href="#">Сначала дорогие</a>
+                                    </li>
+                                    <li class="select__option">
+                                        <a href="#">Сначала дешевые</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="select">
+                                <button class="select__btn"></button>
+                                <ul class="select__list">
+                                    <li class="select__option">
+                                        <a href="#">Показать по 25</a>
+                                    </li>
+                                    <li class="select__option">
+                                        <a href="#">Показать по 50</a>
+                                    </li>
+                                    <li class="select__option">
+                                        <a href="#">Показать по 75</a>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
-                        <div class="select">
-                            <button class="select__btn"></button>
-                            <ul class="select__list">
-                                <li class="select__option">
-                                    <a href="#">Показать по 25</a>
-                                </li>
-                                <li class="select__option">
-                                    <a href="#">Показать по 50</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    @@include('html/catalog.html', {})
-                    <div class="pagination">
-                        <a href="" class="pagination__prev disabled"></a>
-                        <div class="pagination__numbers">
-                            <a class="active" href="">1</a>
-                            <a href="">2</a>
-                            <a href="">3</a>
-                            <a href="">4</a>
-                        </div>
-                        <a href="" class="pagination__next"></a>
+                        @@include('html/catalog.html', {})
+                        @@include('html/pagination.html', {})
                     </div>
                 </div>
             </div>
-            @@include('html/popular.html', {})
+            @@include('html/popular.html', {"title": "Самые популярные"})
+            @@include('html/faq.html', {})
         </main>
         @@include('html/footer.html',{})
         <div id="photo" class="popup">
