@@ -1323,16 +1323,17 @@
             <h2 class="form__title">Остались вопросы?</h2>
             <div class="form__rows">
                 <div class="form__row">
-                    <input autocomplete="off" placeholder="Имя" type="text" minlength="2">
+                    <input autocomplete="off" placeholder="Имя" name type="text" minlength="2">
                 </div>
                 <div class="form__row">
-                    <input autocomplete="off" placeholder="Email*" required type="email">
+                    <input autocomplete="off" placeholder="Email*" name required type="email">
                 </div>
                 <div class="form__row">
-                    <input autocomplete="off" required placeholder="Телефон" type="tel" id="phone">
+                    <input autocomplete="off" minlength="17" placeholder="Телефон" name type="tel" id="phone">
                 </div>
                 <div class="form__row">
-                    <textarea minlength="5" autocomplete="off" required placeholder="Ваш вопрос*" rows="5"></textarea>
+                    <textarea minlength="5" autocomplete="off" required name placeholder="Ваш вопрос*"
+                        rows="5"></textarea>
                 </div>
             </div>
             <button disabled class="btn">отправить</button>
@@ -1448,8 +1449,6 @@
 
 
 	</div>
-	<script src="./js/jquery-3.6.0.min.js"></script>
-	<script src="./js/jquery.maskedinput.min.js"></script>
 	<script src="./js/swiper-bundle.min.js"></script>
 	<script src="./js/app.js"></script>
 </body>

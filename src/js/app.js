@@ -152,9 +152,41 @@ if (popups.length > 0) popups.forEach(item => { popupsObj[item.id] = new Popup(i
 
 
 // Mask phone
-$(function () {
-    $("#phone").mask("+7 (999) 999-99-99");
+window.addEventListener("DOMContentLoaded", function () {
+    [].forEach.call(document.querySelectorAll('#phone'), function (input) {
+        var keyCode;
+        function mask(event) {
+            event.keyCode && (keyCode = event.keyCode);
+            var pos = this.selectionStart;
+            if (pos < 3) event.preventDefault();
+            var matrix = "+7 (___) ___ ____",
+                i = 0,
+                def = matrix.replace(/\D/g, ""),
+                val = this.value.replace(/\D/g, ""),
+                new_value = matrix.replace(/[_\d]/g, function (a) {
+                    return i < val.length ? val.charAt(i++) || def.charAt(i) : a
+                });
+            i = new_value.indexOf("_");
+            if (i != -1) {
+                i < 5 && (i = 3);
+                new_value = new_value.slice(0, i)
+            }
+            var reg = matrix.substr(0, this.value.length).replace(/_+/g,
+                function (a) {
+                    return "\\d{1," + a.length + "}"
+                }).replace(/[+()]/g, "\\$&");
+            reg = new RegExp("^" + reg + "$");
+            if (!reg.test(this.value) || this.value.length < 5 || keyCode > 47 && keyCode < 58) this.value = new_value;
+            if (event.type == "blur" && this.value.length < 5) this.value = ""
+        }
+
+        input.addEventListener("input", mask, false);
+        input.addEventListener("focus", mask, false);
+        input.addEventListener("blur", mask, false);
+        input.addEventListener("keydown", mask, false)
+    });
 });
+
 
 // Левое меню
 const leftDropdowns = document.querySelectorAll('.left-menu__dropdown')
@@ -288,25 +320,11 @@ if (forms.length > 0) {
         if (elements.length > 0) {
             elements.forEach(item => {
                 if (['INPUT', 'TEXTAREA'].includes(item.tagName)) {
-                    item.addEventListener('focus', () => {
-                        item.parentNode.style.border = '1px solid #ffaf35'
-                    })
-                    item.addEventListener('focusout', () => {
-                        item.parentNode.style.border = ''
-                    })
-
-                    item.addEventListener('input', () => {
-                        const phoneInvalid = phone.value.includes('_') || phone.value == '' || !phone.value
-                        console.log(phone.value)
-                        if (hasInvalidInput(elements) && (phone.required ? phoneInvalid : true)) {
-                            button.disabled = true
-                        } else {
-                            button.disabled = false
-                        }
-                    })
+                    item.addEventListener('focus', () => item.parentNode.style.border = '1px solid #ffaf35')
+                    item.addEventListener('focusout', () => item.parentNode.style.border = '')
+                    item.addEventListener('input', () => hasInvalidInput(elements) ? button.disabled = true : button.disabled = false)
                 }
             })
         }
-
     })
 }
