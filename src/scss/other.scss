@@ -475,3 +475,32 @@
     line-height: calc(25px + (12 + 12 * 0.7) * ((100vw - 375px) / 1100)) 25px;
   }
 }
+
+.share {
+  display: flex;
+  color: #60a5fa;
+  display: flex;
+  align-items: center;
+  svg {
+    fill: #60a5fa;
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+  }
+
+  span {
+    margin-left: 10px;
+    font-size: 15px;
+    line-height: 18px;
+    border-bottom: 1px dotted #60a5fa;
+  }
+  &:hover {
+    svg {
+      fill: $red;
+    }
+    color: $red;
+    span {
+      border-bottom: 1px dotted $red;
+    }
+  }
+}
