@@ -733,86 +733,112 @@
             </div>
         </div>
 
-        <div id="order" class="popup popup_opened">
+        <div id="order" class="popup">
             <div class="popup__container">
                 <div class="popup__content">
-                    <form class="form order">
-                        <h2 class="form__title">Оформление заказа</h2>
-                        <ul class="order__list">
-                            <li class="order__item">
-                                <a href="" class="order__photo">
-                                    <img src="./img/items/1.png">
-                                </a>
-                                <div class="order__name">
-                                    <h3>"Новогодняя фура"</h3>
-                                    <p>Арт. 148554</p>
-                                </div>
-                                <div class="counter">
-                                    <button class="counter__symbol minus">-</button>
-                                    <input type="text" value="1">
-                                    <button class="counter__symbol plus">+</button>
-                                </div>
-                                <p class="order__item-price">712 руб.</p>
-                                <p class="cart__delete"></p>
-                            </li>
-                            <li class="order__item">
-                                <a href="" class="order__photo">
-                                    <img src="./img/items/2.png">
-                                </a>
-                                <div class="order__name">
-                                    <h3>"Новогодняя фура"</h3>
-                                    <p>Арт. 148554</p>
-                                </div>
-                                <div class="counter">
-                                    <button class="counter__symbol minus">-</button>
-                                    <input type="text" value="1">
-                                    <button class="counter__symbol plus">+</button>
-                                </div>
-                                <p class="order__item-price">712 руб.</p>
-                                <p class="cart__delete"></p>
-                            </li>
-                        </ul>
-                        <label for="fio" class="order__label">ФИО<span class="req">*</span></label>
-                        <div class="form__row">
-                            <input type="text" id="fio" name required minlength="5">
-                        </div>
-                        <label for="phone" class="order__label">Телефон<span class="req">*</span></label>
-                        <div class="form__row">
-                            <input type="tel" id="phone" name required minlength="17">
-                        </div>
-                        <label class="order__label">Способ доставки<span class="req">*</span></label>
-                        <div class="select">
-                            <button type="button" class="select__btn">Самовывоз<span></span></button>
-                            <ul class="select__list">
-                                <li class="select__option">
-                                    <label class="select__link" for="samovivoz">Самовывоз</label>
-                                    <input type="radio" name="method-delivery" id="samovivoz" required href="#"></input>
-                                </li>
-                                <li class="select__option">
-                                    <label class="select__link" for="kurier">Курьером</label>
-                                    <input type="radio" name="method-delivery" id="kurier" required href="#"></input>
-                                </li>
-                            </ul>
-                        </div>
-                        <label class="order__label">Способ оплаты<span class="req">*</span></label>
-                        <div class="select">
-                            <button type="button" class="select__btn">Оплата при получении<span></span></button>
-                            <ul class="select__list">
-                                <li class="select__option">
-                                    <label class="select__link" for="pri-poluchenii">Оплата при получении</label>
-                                    <input type="radio" name="method-pay" id="pri-poluchenii" required href="#"></input>
-                                </li>
-                            </ul>
-                        </div>
+                    <div class="swiper order-swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <form class="form order">
+                                    <h2 class="form__title">Оформление заказа</h2>
+                                    <ul class="order__list">
+                                        <li class="order__item">
+                                            <a href="" class="order__photo">
+                                                <img src="./img/items/1.png">
+                                            </a>
+                                            <div class="order__name">
+                                                <h3>"Новогодняя фура"</h3>
+                                                <p>Арт. 148554</p>
+                                            </div>
+                                            <div class="counter">
+                                                <button class="counter__symbol minus">-</button>
+                                                <input type="text" value="1">
+                                                <button class="counter__symbol plus">+</button>
+                                            </div>
+                                            <p class="order__item-price">712 руб.</p>
+                                            <button class="cart__delete"></button>
+                                        </li>
+                                        <li class="order__item">
+                                            <a href="" class="order__photo">
+                                                <img src="./img/items/2.png">
+                                            </a>
+                                            <div class="order__name">
+                                                <h3>"Новогодняя фура"</h3>
+                                                <p>Арт. 148554</p>
+                                            </div>
+                                            <div class="counter">
+                                                <button class="counter__symbol minus">-</button>
+                                                <input type="text" value="1">
+                                                <button class="counter__symbol plus">+</button>
+                                            </div>
+                                            <p class="order__item-price">712 руб.</p>
+                                            <button class="cart__delete"></button>
+                                        </li>
+                                    </ul>
+                                    <label for="fio" class="order__label">ФИО<span class="req">*</span></label>
+                                    <div class="form__row">
+                                        <input autocomplete="off" type="text" id="fio" name required minlength="5">
+                                    </div>
+                                    <label for="phone" class="order__label">Телефон<span class="req">*</span></label>
+                                    <div class="form__row">
+                                        <input type="tel" id="phone" autocomplete="off" name required minlength="17">
+                                    </div>
+                                    <label class="order__label">Способ доставки<span class="req">*</span></label>
+                                    <div class="select order__select-adress">
+                                        <button type="button" class="select__btn">Самовывоз<span></span></button>
+                                        <ul class="select__list">
+                                            <li class="select__option">
+                                                <label class="select__link" for="export">Самовывоз</label>
+                                                <input checked type="radio" name="method-delivery" id="export" required
+                                                    href="#"></input>
+                                            </li>
+                                            <li class="select__option">
+                                                <label class="select__link" for="courier">Курьером</label>
+                                                <input type="radio" name="method-delivery" id="courier" required
+                                                    href="#"></input>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="order__export">
+                                        <p>
+                                            Забрерите заказ самостоятельно по адресу:<br>
+                                            <b>г. Сургут, ул. Индустриальная, д. 34, офис 41</b>
+                                        </p>
+                                    </div>
+                                    <div style="display: none;" id="order-address">
+                                        <label for="address" class="order__label">Адрес<span
+                                                class="req">*</span></label>
+                                        <div class="form__row">
+                                            <input autocomplete="off" type="text" id="address" name minlength="5">
+                                        </div>
+                                    </div>
 
-                    </form>
+                                    <label class="order__label">Способ оплаты<span class="req">*</span></label>
+                                    <div class="select">
+                                        <button type="button" class="select__btn">Оплата при
+                                            получении<span></span></button>
+                                        <ul class="select__list">
+                                            <li class="select__option">
+                                                <label class="select__link" for="pri-poluchenii">Оплата при
+                                                    получении</label>
+                                                <input type="radio" name="method-pay" id="pri-poluchenii" required
+                                                    href="#"></input>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="order__total">
+                                        <p><span class="red">Итого</span> 1424 руб.</p>
+                                        <button disabled type="submit" class="btn">Оформить заказ</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="swiper-scrollbar"></div>
+                    </div>
                 </div>
                 <button class="popup__close">✖</button>
             </div>
         </div>
-
-
-
     </div>
     <script src="./js/swiper-bundle.min.js"></script>
     <script src="./js/app.js"></script>

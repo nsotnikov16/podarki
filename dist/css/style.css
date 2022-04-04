@@ -1407,8 +1407,8 @@ body {
   border-bottom-right-radius: 0;
 }
 .select.open .select__list {
-  max-height: 1000px;
-  overflow: visible;
+  opacity: 1;
+  visibility: visible;
 }
 .select.open .select__btn span::before {
   transform: rotate(-45deg);
@@ -1459,10 +1459,10 @@ body {
   width: 100%;
   top: 100%;
   left: 0;
-  max-height: 0;
   display: flex;
-  overflow: hidden;
-  transition: max-height 0.25s ease-in-out;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s ease-in-out, visibility 0.25s ease-in-out;
   border-bottom-left-radius: 9px;
   border-bottom-right-radius: 9px;
   z-index: 999;
@@ -2770,9 +2770,10 @@ body {
 
 /* Заказ */
 .order {
-  background-color: white;
-  padding: 60px;
-  border-radius: 15px;
+  /*  background-color: white;
+     padding: 60px;
+     border-radius: 15px;
+  */
 }
 .order .form__title {
   font-family: "Tenor Sans";
@@ -2859,6 +2860,35 @@ body {
 .order .select.open {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
+}
+.order__export {
+  background: #eff6ff;
+  border-radius: 6px;
+  max-width: 488px;
+  padding: 16px 18px;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 23px;
+  text-align: center;
+  margin-bottom: 25px;
+}
+.order__total {
+  padding-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.order__total p {
+  font-weight: 600;
+  font-size: 21px;
+  line-height: 25px;
+}
+
+.order-swiper {
+  border-radius: 15px;
+  background-color: white;
+  padding: 40px 60px;
+  max-height: 90vh;
 }
 
 /* Отзывы и благодарности */
@@ -3519,6 +3549,7 @@ body {
 
 #order .popup__close {
   top: 20px;
-  right: 10px;
+  right: 15px;
   color: rgba(51, 51, 51, 0.3);
+  z-index: 99;
 }

@@ -207,7 +207,7 @@ if (selects.length > 0) {
         const editTextButton = (link, flug) => {
             selectName = link.textContent
             selectBtn.innerHTML = `${selectName}<span></span>`
-            selectLinks.forEach(link => link.textContent === selectName ? link.parentNode.style.display = 'none' : link.parentNode.style.display = 'block')
+            /* selectLinks.forEach(link => link.textContent === selectName ? link.parentNode.style.display = 'none' : link.parentNode.style.display = 'block') */
             setTimeout(() => select.classList.remove('open'), 2)
         }
         const selectBtn = select.querySelector('.select__btn')
@@ -398,7 +398,7 @@ anchors.forEach(function (item) {
     });
 });
 
-// Состав подарка в модальное окно и обратно
+// Состав подарка в модальное окно
 const structure = document.querySelector('.detail__structure')
 const scrollStructure = document.querySelector('.detail__scroll')
 if (structure && scrollStructure) {
@@ -412,3 +412,42 @@ if (structure && scrollStructure) {
         }
     }
 }
+
+
+/* Заказ */
+var swiperOrder = new Swiper(".order-swiper", {
+    direction: "vertical",
+    slidesPerView: "auto",
+    freeMode: true,
+    scrollbar: {
+        el: ".order-swiper .swiper-scrollbar",
+    },
+    mousewheel: true,
+});
+
+const selectMethodDeliveryOrder = document.querySelector('.order__select-adress')
+if (selectMethodDeliveryOrder) {
+    const orderExport = document.querySelector('.order__export')
+    const orderAddres = document.querySelector('#order-address')
+    const inputsMethodDelivery = selectMethodDeliveryOrder.querySelectorAll('input')
+    const inputAddress = orderAddres.querySelector('input')
+
+    function checkInputDelivery(input) {
+        Array.from([orderExport, orderAddres]).forEach(el => el.style.display = 'none')
+        if (input.id == 'courier') {
+            orderAddres.style.display = 'block'
+            orderExport.style.display = 'none'
+            inputAddress.required = true
+
+        } else if (input.id == 'export') {
+            orderAddres.style.display = 'none'
+            orderExport.style.display = 'block'
+            inputAddress.required = false
+        }
+    }
+
+    inputsMethodDelivery.forEach(item => item.addEventListener('click', () => checkInputDelivery(item)))
+}
+
+
+if (popupsObj['order']) popupsObj['order'].open()

@@ -1,114 +1,143 @@
 .order {
-    background-color: white;
+  /*  background-color: white;
     padding: 60px;
     border-radius: 15px;
+ */
+  .form__title {
+    font-family: "Tenor Sans";
+  }
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-bottom: 23px;
+  }
 
-    .form__title {
-        font-family: "Tenor Sans";
+  .counter {
+    height: 40px;
+  }
+
+  .cart__delete {
+    justify-self: end;
+  }
+
+  &__item {
+    display: grid;
+    grid-template-columns: max-content 160px 80px 80px 1fr;
+    gap: 20px;
+    align-items: center;
+  }
+
+  &__photo {
+    width: 70px;
+    height: 70px;
+    border: 1px solid rgba(0, 0, 0, 0.07);
+    border-radius: 7px;
+    padding: 8px 4px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
     }
-    &__list {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 10px;
-        margin-bottom: 23px;
+  }
+
+  &__name {
+    h3 {
+      font-weight: 600;
+      font-size: 15px;
+      line-height: 18px;
     }
-
-    .counter {
-        height: 40px;
+    p {
+      font-size: 13px;
+      line-height: 16px;
+      color: rgba(51, 51, 51, 0.5);
+      margin-top: 6px;
     }
+  }
 
-    .cart__delete {
-        justify-self: end;
-    }
+  &__item-price {
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 18px;
+  }
 
-    &__item {
-        display: grid;
-        grid-template-columns: max-content 160px 80px 80px 1fr;
-        gap: 20px;
-        align-items: center;
-    }
+  &__label {
+    font-size: 15px;
+    line-height: 18px;
+    display: block;
+    color: rgba(51, 51, 51, 0.5);
 
-    &__photo {
-        width: 70px;
-        height: 70px;
-        border: 1px solid rgba(0, 0, 0, 0.07);
-        border-radius: 7px;
-        padding: 8px 4px;
-        img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-        }
-    }
-
-    &__name {
-        h3 {
-            font-weight: 600;
-            font-size: 15px;
-            line-height: 18px;
-        }
-        p {
-            font-size: 13px;
-            line-height: 16px;
-            color: rgba(51, 51, 51, 0.5);
-            margin-top: 6px;
-        }
-    }
-
-    &__item-price {
-        font-weight: 600;
-        font-size: 15px;
-        line-height: 18px;
-    }
-
-    &__label {
-        font-size: 15px;
-        line-height: 18px;
-        display: block;
-        color: rgba(51, 51, 51, 0.5);
-
-        .req {
-            color: $red;
-        }
-
-        margin-bottom: 7px;
+    .req {
+      color: $red;
     }
 
-    .form__row,
-    .select {
-        margin-bottom: 23px;
-    }
+    margin-bottom: 7px;
+  }
 
-    .select {
-        border: 1px solid rgba(51, 51, 51, 0.3);
-        border-radius: 6px;
-    }
+  .form__row,
+  .select {
+    margin-bottom: 23px;
+  }
 
-    .select__list {
-        border: 1px solid rgba(51, 51, 51, 0.3);
-        border-top: none;
-        left: -1px;
-        width: calc(100% + 2px);
-    }
+  .select {
+    border: 1px solid rgba(51, 51, 51, 0.3);
+    border-radius: 6px;
+  }
 
-    .select__option {
-        
-    }
+  .select__list {
+    border: 1px solid rgba(51, 51, 51, 0.3);
+    border-top: none;
+    left: -1px;
+    width: calc(100% + 2px);
+  }
 
-    .select__btn {
-        padding: 16px 21px;
-        justify-content: space-between;
-        width: 100%;
-    }
+  .select__option {
+  }
 
-    .select__link {
-        text-align: left;
-        padding-left: 21px;
-        
-    }
+  .select__btn {
+    padding: 16px 21px;
+    justify-content: space-between;
+    width: 100%;
+  }
 
-    .select.open {
-        border-bottom-left-radius: 0;
-        border-bottom-right-radius: 0;
+  .select__link {
+    text-align: left;
+    padding-left: 21px;
+  }
+
+  .select.open {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  &__export {
+    background: #eff6ff;
+    border-radius: 6px;
+    max-width: 488px;
+    padding: 16px 18px;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 23px;
+    text-align: center;
+    margin-bottom: 25px;
+  }
+
+  &__total {
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    p {
+      font-weight: 600;
+      font-size: 21px;
+      line-height: 25px;
     }
+  }
+}
+
+.order-swiper {
+  border-radius: 15px;
+  background-color: white;
+  padding: 40px 60px;
+  max-height: 90vh;
 }

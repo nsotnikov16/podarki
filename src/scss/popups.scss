@@ -93,7 +93,8 @@
 #order {
   .popup__close {
     top: 20px;
-    right: 10px;
-    color: rgba(51, 51, 51, 0.3)
+    right: 15px;
+    color: rgba(51, 51, 51, 0.3);
+    z-index: 99;
   }
 }
