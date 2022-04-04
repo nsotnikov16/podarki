@@ -329,7 +329,8 @@ if (forms.length > 0) {
 
 // Детальная страница
 const swiperThumbsDetail = new Swiper(".detail-swiper-thumbs", {
-    direction: 'vertical',
+    spaceBetween: 10,
+
     watchSlidesProgress: true,
     navigation: {
         nextEl: ".detail-swiper-thumbs .swiper-button-next",
@@ -337,10 +338,15 @@ const swiperThumbsDetail = new Swiper(".detail-swiper-thumbs", {
     },
     mousewheel: true,
     breakpoints: {
-        1024: {
-            spaceBetween: 10,
+        480: {
+            direction: 'vertical',
             slidesPerView: 4,
+        },
+        320: {
+            direction: 'horizontal',
+            slidesPerView: 3,
         }
+
     }
 });
 const swiperDetail = new Swiper(".detail-swiper", {
