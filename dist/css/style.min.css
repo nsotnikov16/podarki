@@ -2055,6 +2055,7 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 110px;
+  align-items: baseline;
 }
 .detail__product .detail-swiper-thumbs {
   width: 100%;
@@ -2262,13 +2263,13 @@ body {
 .detail__structure .detail__title {
   text-align: center;
 }
-.detail__structure ul {
+.detail__structure-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, 240px);
   gap: 20px 30px;
   justify-content: center;
 }
-.detail__structure ul li {
+.detail__structure-list li {
   background: #ffffff;
   border: 1px solid rgba(51, 51, 51, 0.2);
   border-radius: 15px;
@@ -2277,32 +2278,32 @@ body {
   flex-direction: column;
   justify-content: space-between;
 }
-.detail__structure ul li > p {
+.detail__structure-list li > p {
   font-weight: 600;
   font-size: 21px;
   line-height: 25px;
   margin-top: 12px;
 }
-.detail__structure ul img {
+.detail__structure-list img {
   width: 100%;
   object-fit: contain;
   height: 200px;
 }
-.detail__structure ul div p {
+.detail__structure-list div p {
   font-size: 15px;
   line-height: 18px;
   color: rgba(51, 51, 51, 0.5);
   margin-top: 5px;
 }
-.detail__structure ul h3 {
+.detail__structure-list h3 {
   font-weight: 600;
   font-size: 17px;
   line-height: 20px;
   margin-top: 13px;
 }
-.detail__structure ul li > p,
-.detail__structure ul li > div > p,
-.detail__structure ul li h3 {
+.detail__structure-list li > p,
+.detail__structure-list li > div > p,
+.detail__structure-list li h3 {
   margin-left: 10px;
   margin-right: 4px;
 }
@@ -2320,6 +2321,12 @@ body {
   }
 }
 @media (max-width: 767px) {
+  .detail {
+    margin-bottom: 50px;
+  }
+  .detail #structure.detail__section {
+    display: none;
+  }
   .detail__product {
     margin-top: 22px;
   }
@@ -3165,12 +3172,14 @@ body {
     max-width: 85vw;
   }
 }
-.popup .filter, .popup .left-menu .left-menu__list {
+.popup .filter,
+.popup .left-menu .left-menu__list {
   overflow: auto;
   max-height: 80vh;
 }
 @media (max-width: 1000px) and (min-width: 560px) {
-  .popup .filter, .popup .left-menu .left-menu__list {
+  .popup .filter,
+.popup .left-menu .left-menu__list {
     width: 75vw;
   }
 }
@@ -3179,4 +3188,17 @@ body {
 }
 .popup .filter {
   min-width: 300px;
+}
+
+#structure-popup .popup__content {
+  padding-bottom: 20px;
+  background: white;
+  border-radius: 9px;
+}
+#structure-popup .detail__structure {
+  max-height: 80vh;
+  margin: 20px 0 0;
+  width: 90vw;
+  overflow: auto;
+  padding-top: 20px;
 }

@@ -35,7 +35,7 @@
       color: #ffaf35;
     }
 
-    @media(max-width: 375px) {
+    @media (max-width: 375px) {
       right: 0;
     }
   }
@@ -55,12 +55,11 @@
     }
   }
 
-
-  .filter, .left-menu .left-menu__list {
-
+  .filter,
+  .left-menu .left-menu__list {
     overflow: auto;
     max-height: 80vh;
-    @media(max-width: 1000px) and (min-width: 560px) {
+    @media (max-width: 1000px) and (min-width: 560px) {
       width: 75vw;
     }
   }
@@ -71,5 +70,21 @@
 
   .filter {
     min-width: 300px;
+  }
+}
+
+#structure-popup {
+  .popup__content {
+    padding-bottom: 20px;
+    background: white;
+    border-radius: 9px;
+  }
+
+  .detail__structure {
+    max-height: 80vh;
+    margin: 20px 0 0;
+    width: 90vw;
+    overflow: auto;
+    padding-top: 20px;
   }
 }

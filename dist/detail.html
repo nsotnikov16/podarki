@@ -255,10 +255,9 @@
                                         <td>28 конфет</td>
                                     </tr>
                                 </table>
-                                <a href="#structure" class="detail__scroll">Смотреть состав подарка</a>
+                                <button href="#structure" onclick="showAllStructure(this)" class="detail__scroll">Смотреть состав подарка</button>
                             </div>
                         </div>
-
                     </section>
                     <section class="detail__section">
                         <div class="detail__parameters">
@@ -294,7 +293,7 @@
 
                         <div class="detail__structure">
                             <h3 class="detail__title">Состав подарка</h3>
-                            <ul>
+                            <ul class="detail__structure-list">
                                 <li>
                                     <div>
                                         <img src="./img/slavyanka.png">
@@ -884,6 +883,15 @@
         </div>
 
         <div id="left-menu" class="popup">
+            <div class="popup__container">
+                <div class="popup__content">
+
+                </div>
+                <button class="popup__close">✖</button>
+            </div>
+        </div>
+
+        <div id="structure-popup" class="popup">
             <div class="popup__container">
                 <div class="popup__content">
 
