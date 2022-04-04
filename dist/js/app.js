@@ -208,9 +208,10 @@ if (selects.length > 0) {
             selectName = link.textContent
             selectBtn.innerHTML = `${selectName}<span></span>`
             selectLinks.forEach(link => link.textContent === selectName ? link.parentNode.style.display = 'none' : link.parentNode.style.display = 'block')
+            setTimeout(() => select.classList.remove('open'), 2)
         }
         const selectBtn = select.querySelector('.select__btn')
-        const selectLinks = select.querySelectorAll('.select__option a')
+        const selectLinks = select.querySelectorAll('.select__link')
         if (selectLinks.length > 0) {
             selectLinks.forEach((item, ind) => {
                 ind == 0 ? editTextButton(item, true) : ''
@@ -285,15 +286,18 @@ if (swiperPopular) {
             el: ".popular .swiper-scrollbar",
         },
 
-        spaceBetween: 30,
         breakpoints: {
             1290: {
-                width: null,
-                slidesPerView: 4
+                slidesPerView: 4,
+                spaceBetween: 30,
+            },
+            860: {
+                slidesPerView: 3,
+                spaceBetween: 30,
             },
             480: {
                 spaceBetween: 30,
-                width: 300
+                slidesPerView: 2
             },
             320: {
                 spaceBetween: 16,

@@ -8,7 +8,7 @@
 	<link rel="stylesheet" href="css/style.css">
 	<!-- <script src="https://api-maps.yandex.ru/2.1/?apikey=613b8b9b-619b-4e88-88da-82b9980c3fee&lang=ru_RU"
 		type="text/javascript"></script> -->
-	<title>Каталог</title>
+	<title>Корзина</title>
 </head>
 
 <body>
@@ -131,7 +131,7 @@
     </div>
 
 </header>
-        <div class="page__top page__top_new-year">
+        <div class="page__top">
             <div class="page__container">
                 
     <ul class="breadcrumbs">
@@ -146,234 +146,113 @@
         </li>
     </ul>
     
-                <h1 class="page__title">Новогодняя фура купить в Сургуте</span></h1>
+                <h1 class="page__title">Корзина, 2 шт - 1600 гр.</span></h1>
             </div>
         </div>
         <main>
             <div class="page__container">
-                <div class="detail">
-                    <section class="detail__section">
-
-                        <div class="detail__product">
-                            <div class="detail__product-left">
-                                <ul class="labels">
-                                    <li style="background:#0FB429;">
-                                        <img src="./img/labels/1.png">
-                                        <span>Новинка</span>
-                                    </li>
-                                    <li style="background:#5B3AB9;">
-                                        <img src="./img/labels/3.png">
-                                        <span>Хит</span>
-                                    </li>
-                                    <li style="background:#E02F2F;">
-                                        <img src="./img/labels/2.png">
-                                        <span>Акция</span>
-                                    </li>
-                                </ul>
-                                <div thumbsslider class="swiper detail-swiper-thumbs">
-                                    <div class="swiper-wrapper">
-                                        <div class="swiper-slide">
-                                            <img src="./img/items/1.png">
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <img src="./img/items/2.png">
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <img src="./img/items/3.png">
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <img src="./img/items/3.png">
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <img src="./img/items/3.png">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper detail-swiper">
-                                    <div class="swiper-wrapper">
-                                        <div class="swiper-slide">
-                                            <img src="./img/items/1.png">
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <img src="./img/items/2.png">
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <img src="./img/items/3.png">
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <img src="./img/items/3.png">
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <img src="./img/items/3.png">
-                                        </div>
-                                    </div>
-                                </div>
-                                <button class="share">
-                                    <svg>
-                                        <use href="./img/icons/icons.svg#share"></use>
-                                    </svg>
-                                    <span>Поделиться</span>
-                                </button>
+    <div class="cart">
+        <div class="cart__container">
+            <div class="cart__top">
+                <table>
+                    <tr>
+                        <th></th>
+                        <th>Наименование</th>
+                        <th>Кол-во</th>
+                        <th>Вес</th>
+                        <th>Цена</th>
+                        <th></th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="#" class="cart__photo">
+                                <img src="./img/items/2.png">
+                            </a>
+                        </td>
+                        <td>
+                            <p class="cart__title">Наименование</p>
+                            <a href="#" class="cart__name">"Новогодняя фура"</a>
+                        </td>
+                        <td>
+                            <p class="cart__title">Количество</p>
+                            <div class="counter">
+                                <button class="counter__symbol minus">-</button>
+                                <input type="text" value="1">
+                                <button class="counter__symbol plus">+</button>
                             </div>
-                            <div class="detail__product-right">
-                                <p class="detail__article">Арт. 148554</p>
-                                <div class="detail__price">
-                                    <span class="old">890 р</span>
-                                    <span class="new">712 р
-                                        <span class="percent">-20%</span>
-                                    </span>
-                                </div>
-                                <div class="catalog__to-cart">
-                                    <div class="counter">
-                                        <button class="counter__symbol minus">-</button>
-                                        <input type="text" value="1">
-                                        <button class="counter__symbol plus">+</button>
-                                    </div>
-                                    <button class="btn">В корзину</button>
-                                </div>
-                                <p style="font-size: 15px; line-height: 18px; opacity: 0.5;">Другие варианты</p>
-                                <ul class="weight">
-                                    <li><a class="active" href="">800 г.</a></li>
-                                    <li><a href="">500 г.</a></li>
-                                    <li><a href="">350 г.</a></li>
-                                </ul>
-                                <table class="detail__specifications">
-                                    <tr>
-                                        <td>Материал:</td>
-                                        <td>Картон</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Размеры:</td>
-                                        <td>20х10х10см</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Вес:</td>
-                                        <td>800 гр</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Состав:</td>
-                                        <td>28 конфет</td>
-                                    </tr>
-                                </table>
-                                <button href="#structure" onclick="showAllStructure(this)" class="detail__scroll">Смотреть состав подарка</button>
+                        </td>
+                        <td>
+                            <p class="cart__title">Вес</p>
+                            <p class="cart__text">800 гр.</p>
+                        </td>
+                        <td>
+                            <p class="cart__title">Цена</p>
+                            <p class="cart__text">712 руб.</p>
+                        </td>
+                        <td>
+                            <button class="cart__delete">Удалить</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="#" class="cart__photo">
+                                <img src="./img/items/3.png">
+                            </a>
+                        </td>
+                        <td>
+                            <p class="cart__title">Наименование</p>
+                            <a href="#" class="cart__name">Мультиинструмент «Крутому
+                                мужику»</a>
+                        </td>
+                        <td>
+                            <p class="cart__title">Количество</p>
+                            <div class="counter">
+                                <button class="counter__symbol minus">-</button>
+                                <input type="text" value="1">
+                                <button class="counter__symbol plus">+</button>
                             </div>
-                        </div>
-                    </section>
-                    <section class="detail__section">
-                        <div class="detail__parameters">
-                            <div class="detail__parameters-left">
-                                <h3 class="detail__title">Параметры подарка</h3>
-
-                                <div class="detail__length">
-                                    <p class="detail__weight">800 гр</p>
-                                </div>
-                                <div class="detail__width-height"></div>
-                                <p class="detail__size height">10 см</p>
-                                <p class="detail__size length">20 см </p>
-                                <p class="detail__size width"> 10 см</p>
-                            </div>
-                            <div class="detail__parameters-right">
-                                <h3 class="detail__title">Картон, УФ лак.</h3>
-                                <div class="content">
-                                    <p>
-                                        Если вы ищете оригинальный новогодний подарок, то «Новогодняя фура» станет
-                                        настоящей находкой. Он имеет форму смартфона, которая прорисована с особой
-                                        тщательностью и учетом всех технических деталей, поэтому подключив воображение,
-                                        ребенок может играть с ним, разговаривая по видеосвязи с символом наступающего
-                                        года и загадывая желания. За плотным картоном скрываются вкусные шоколадные и
-                                        желейные конфеты, вафли, шоколадные фигурки и нежное суфле. В подарке
-                                        используются только сладкие угощения от известных и проверенных производителей,
-                                        в числе которых Марс, Конти, Красный Октябрь и пр.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                    <section id="structure" class="detail__section">
-
-                        <div class="detail__structure">
-                            <h3 class="detail__title">Состав подарка</h3>
-                            <ul class="detail__structure-list">
-                                <li>
-                                    <div>
-                                        <img src="./img/slavyanka.png">
-                                        <h3>Славяночка шоколадная</h3>
-                                        <p>Славянка</p>
-                                    </div>
-                                    <p>1 шт.</p>
-                                </li>
-                                <li>
-                                    <div>
-                                        <img src="./img/slavyanka.png">
-                                        <h3>Славяночка шоколадная</h3>
-                                        <p>Славянка</p>
-                                    </div>
-                                    <p>3 шт.</p>
-                                </li>
-                                <li>
-                                    <div>
-                                        <img src="./img/slavyanka.png">
-                                        <h3>Славяночка шоколадная</h3>
-                                        <p>Славянка</p>
-                                    </div>
-                                    <p>2 шт.</p>
-                                </li>
-                                <li>
-                                    <div>
-                                        <img src="./img/slavyanka.png">
-                                        <h3>Славяночка шоколадная</h3>
-                                        <p>Славянка</p>
-                                    </div>
-                                    <p>1 шт.</p>
-                                </li>
-                                <li>
-                                    <div>
-                                        <img src="./img/slavyanka.png">
-                                        <h3>Славяночка шоколадная</h3>
-                                        <p>Славянка</p>
-                                    </div>
-                                    <p>1 шт.</p>
-                                </li>
-                                <li>
-                                    <div>
-                                        <img src="./img/slavyanka.png">
-                                        <h3>Славяночка шоколадная</h3>
-                                        <p>Славянка</p>
-                                    </div>
-                                    <p>3 шт.</p>
-                                </li>
-                                <li>
-                                    <div>
-                                        <img src="./img/slavyanka.png">
-                                        <h3>Славяночка шоколадная</h3>
-                                        <p>Славянка</p>
-                                    </div>
-                                    <p>1 шт.</p>
-                                </li>
-                                <li>
-                                    <div>
-                                        <img src="./img/slavyanka.png">
-                                        <h3>Славяночка шоколадная</h3>
-                                        <p>Славянка</p>
-                                    </div>
-                                    <p>1 шт.</p>
-                                </li>
-
-                            </ul>
-                        </div>
-                    </section>
+                        </td>
+                        <td>
+                            <p class="cart__title">Вес</p>
+                            <p class="cart__text">1800 гр.</p>
+                        </td>
+                        <td>
+                            <p class="cart__title">Цена</p>
+                            <p class="cart__text">12712 руб.</p>
+                        </td>
+                        <td>
+                            <button class="cart__delete">Удалить</button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="cart__bottom">
+                <div class="cart__counter">
+                    <p>Общее количество товаров</p>
+                    <p>2 шт.</p>
+                </div>
+                <div class="cart__total">
+                    <p>Итого:</p>
+                    <p>1424 руб.</p>
                 </div>
             </div>
-            <section class="section background-white">
+        </div>
+        <div class="cart__buttons">
+            <a href="#" class="btn">Продолжить покупки</a>
+            <button data-pointer="order" class="btn">Оформить заказ</button>
+        </div>
+    </div>
+</div>
+            <section class="section">
     <div class="page__container">
         <div style="max-width: 1250px;" class="section__with-arrows">
-            <h2 class="section__title section__title_left">Похожие товары</h2>
+            <h2 class="section__title section__title_left">Добавить в комплект</h2>
             <div class="section__arrows">
                 <button class="arrow arrow_left swiper-button-popular-prev "></button>
                 <button class="arrow arrow_right swiper-button-popular-next"></button>
             </div>
         </div>
-        <div class="swiper popular">
+        <div class="swiper popular addCart">
             <div class="swiper-wrapper swiper-wrapper-popular">
                 <div class="swiper-slide">
                     <li class="catalog__item ">
@@ -741,50 +620,6 @@
         </div>
     </div>
 </section>
-            <section class="section section_faq">
-    <div class="page__container">
-        <form class="form form_faq">
-            <h2 class="form__title">Остались вопросы?</h2>
-            <div class="form__rows">
-                <div class="form__row">
-                    <input autocomplete="off" placeholder="Имя" name type="text" minlength="2">
-                </div>
-                <div class="form__row">
-                    <input autocomplete="off" placeholder="Email*" name required type="email">
-                </div>
-                <div class="form__row">
-                    <input autocomplete="off" minlength="17" placeholder="Телефон" name type="tel" id="phone">
-                </div>
-                <div class="form__row">
-                    <textarea minlength="5" autocomplete="off" required name placeholder="Ваш вопрос*"
-                        rows="5"></textarea>
-                </div>
-            </div>
-            <button disabled class="btn">отправить</button>
-            <div class="messengers">
-                <p class="messengers__title">Или напишите нам в мессенджеры</p>
-                <ul class="messengers__list">
-                    <li class="messengers__item">
-                        <a href="#" class="messengers__link wa">
-                            <svg>
-                                <use href="./img/icons/icons.svg#whatsapp"></use>
-                            </svg>
-                            <span>
-                                Написать в WhatsApp
-                            </span> </a>
-                    </li>
-                    <li class="messengers__item">
-                        <a href="#" class="messengers__link viber">
-                            <svg>
-                                <use href="./img/icons/icons.svg#viber"></use>
-                            </svg>
-                            <span>Написать в Viber</span></a>
-                    </li>
-                </ul>
-            </div>
-        </form>
-    </div>
-</section>
         </main>
         <footer class="footer">
     <div class="page__container">
@@ -897,6 +732,85 @@
                 <button class="popup__close">✖</button>
             </div>
         </div>
+
+        <div id="order" class="popup popup_opened">
+            <div class="popup__container">
+                <div class="popup__content">
+                    <form class="form order">
+                        <h2 class="form__title">Оформление заказа</h2>
+                        <ul class="order__list">
+                            <li class="order__item">
+                                <a href="" class="order__photo">
+                                    <img src="./img/items/1.png">
+                                </a>
+                                <div class="order__name">
+                                    <h3>"Новогодняя фура"</h3>
+                                    <p>Арт. 148554</p>
+                                </div>
+                                <div class="counter">
+                                    <button class="counter__symbol minus">-</button>
+                                    <input type="text" value="1">
+                                    <button class="counter__symbol plus">+</button>
+                                </div>
+                                <p class="order__item-price">712 руб.</p>
+                                <p class="cart__delete"></p>
+                            </li>
+                            <li class="order__item">
+                                <a href="" class="order__photo">
+                                    <img src="./img/items/2.png">
+                                </a>
+                                <div class="order__name">
+                                    <h3>"Новогодняя фура"</h3>
+                                    <p>Арт. 148554</p>
+                                </div>
+                                <div class="counter">
+                                    <button class="counter__symbol minus">-</button>
+                                    <input type="text" value="1">
+                                    <button class="counter__symbol plus">+</button>
+                                </div>
+                                <p class="order__item-price">712 руб.</p>
+                                <p class="cart__delete"></p>
+                            </li>
+                        </ul>
+                        <label for="fio" class="order__label">ФИО<span class="req">*</span></label>
+                        <div class="form__row">
+                            <input type="text" id="fio" name required minlength="5">
+                        </div>
+                        <label for="phone" class="order__label">Телефон<span class="req">*</span></label>
+                        <div class="form__row">
+                            <input type="tel" id="phone" name required minlength="17">
+                        </div>
+                        <label class="order__label">Способ доставки<span class="req">*</span></label>
+                        <div class="select">
+                            <button type="button" class="select__btn">Самовывоз<span></span></button>
+                            <ul class="select__list">
+                                <li class="select__option">
+                                    <label class="select__link" for="samovivoz">Самовывоз</label>
+                                    <input type="radio" name="method-delivery" id="samovivoz" required href="#"></input>
+                                </li>
+                                <li class="select__option">
+                                    <label class="select__link" for="kurier">Курьером</label>
+                                    <input type="radio" name="method-delivery" id="kurier" required href="#"></input>
+                                </li>
+                            </ul>
+                        </div>
+                        <label class="order__label">Способ оплаты<span class="req">*</span></label>
+                        <div class="select">
+                            <button type="button" class="select__btn">Оплата при получении<span></span></button>
+                            <ul class="select__list">
+                                <li class="select__option">
+                                    <label class="select__link" for="pri-poluchenii">Оплата при получении</label>
+                                    <input type="radio" name="method-pay" id="pri-poluchenii" required href="#"></input>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </form>
+                </div>
+                <button class="popup__close">✖</button>
+            </div>
+        </div>
+
 
 
     </div>

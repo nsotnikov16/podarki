@@ -124,6 +124,12 @@ body {
 /* Поставщики */
 @import "suppliers";
 
+/* Корзина */
+@import 'cart';
+
+/* Заказ */
+@import 'order';
+
 /* Отзывы и благодарности */
 @import "reviews";
 
