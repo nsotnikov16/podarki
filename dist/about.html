@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+	<link rel="stylesheet" href="css/style.css">
+	<!-- <script src="https://api-maps.yandex.ru/2.1/?apikey=613b8b9b-619b-4e88-88da-82b9980c3fee&lang=ru_RU"
+		type="text/javascript"></script> -->
+	<title>О нас</title>
+</head>
+
+<body>
+    <div class="page background-lightgray">
+        <header class="header background-white">
+    <div class="header__container page__container">
+        <a href="/" class="header__logo"></a>
+        <div class="address header__address">
+            <svg>
+                <use href="./img/icons/icons.svg#address"></use>
+            </svg>
+            <p><span>Сургут</span> Индустриальная 34, оф. 21</p>
+        </div>
+        <ul class="menu header__menu">
+            <li class="menu__item menu__item_dropdown">
+                <a class="menu__link" href="#">Каталог</a>
+                <div class="menu__expand copy">
+                    <ul class="menu__list-dropdown">
+                        <li><a href="#">Подарки на 23 февраля</a></li>
+                        <li><a href="#">Подарки на 8 марта</a></li>
+                        <li><a href="#">Подарки на НГ</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="menu__item"><a class="menu__link" href="#">Акции</a></li>
+            <li class="menu__item"><a class="menu__link" href="#">Доставка и оплата</a></li>
+            <li class="menu__item"><a class="menu__link" href="#">О нас</a></li>
+            <li class="menu__item"><a class="menu__link" href="#">Контакты</a></li>
+        </ul>
+        <a href="tel:+73462229001" class="phone header__phone">
+            <svg>
+                <use href="./img/icons/icons.svg#phone"></use>
+            </svg>
+            <p>+7 3462 22-90-01</p>
+        </a>
+        <div class="header__catalog">
+            <a class="btn btn_catalog" href="">
+                <svg>
+                    <use href="./img/icons/icons.svg#btn_catalog"></use>
+                </svg>
+                <span>Каталог подарков</span>
+            </a>
+        </div>
+        <form class="form search">
+            <div class="form__row">
+                <input type="text" placeholder="Поиск подарка" minlength="2" />
+                <svg class="search__btn search__btn_inForm">
+                    <use href="./img/icons/icons.svg#search"></use>
+                </svg>
+            </div>
+        </form>
+        <ul class="social header__social">
+            <li>
+                <a class="social__wa" href="">
+                    <svg>
+                        <use href="./img/icons/icons.svg#whatsapp"></use>
+                    </svg>
+                </a>
+            </li>
+            <li>
+                <a class="social__vk" href="">
+                    <svg>
+                        <use href="./img/icons/icons.svg#vk"></use>
+                    </svg>
+                </a>
+            </li>
+            <li>
+                <a class="social__viber" href="">
+                    <svg>
+                        <use href="./img/icons/icons.svg#viber"></use>
+                    </svg>
+                </a>
+            </li>
+        </ul>
+        <a href="" class="btn header__cart">
+            <svg>
+                <use href="./img/icons/icons.svg#cart"></use>
+            </svg>
+            <span>18 500 р.</span>
+            <span class="header__cart-count">2</span>
+        </a>
+    </div>
+    <div class="header__mobile">
+        <div class="header__mobile-left">
+            <div class="header__burger">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+
+        <div class="header__mobile-right">
+            <form class="form search">
+                <div class="form__row">
+                    <input type="text" placeholder="Поиск подарка" minlength="2" />
+                    <svg class="search__btn search__btn_inForm">
+                        <use href="./img/icons/icons.svg#search"></use>
+                    </svg>
+                    <div class="search__close">
+                        <span></span><span></span>
+                    </div>
+                </div>
+                <svg class="search__btn search__btn_outForm">
+                    <use href="./img/icons/icons.svg#search"></use>
+                </svg>
+            </form>
+            
+            <a href="tel:+73462229001" class="header__mobile-phone"></a>
+            <a href="" class="btn header__cart">
+                <div style="position: relative;">
+                    <svg>
+                        <use href="./img/icons/icons.svg#cart"></use>
+                    </svg>
+                    <span class="header__cart-count">2</span>
+                </div>
+                <span>18 500 р.</span>
+            </a>
+        </div>
+        <div class="header__mobile-bottom">
+            <div class="header__mobile-info"></div>
+        </div>
+    </div>
+
+</header>
+        <div class="page__top page__top_new-year">
+            <div class="page__container">
+                
+    <ul class="breadcrumbs">
+        <li>
+            <a href="#">Главная</a>
+        </li>
+        <li>
+            <a href="#">Каталог</a>
+        </li>
+        <li>
+            <p>Подарки на новый год</p>
+        </li>
+    </ul>
+    
+                <h1 class="page__title">О нас</h1>
+            </div>
+        </div>
+        <main>
+            <div class="page__container about">
+                <img src="./img/about/banner.png" class="about__banner">
+                <section class="about__section background-white">
+                    <h2 class="about__title">Будем полезны</h2>
+                    <ul class="about__benefit">
+                        <li>
+                            <img src="./img/about/benefit1.png">
+                            <p>Корпоративные
+                                новогодние подарки</p>
+                        </li>
+                        <li>
+                            <img src="./img/about/benefit2.png">
+                            <p>Подарки на
+                                профессиональные
+                                праздники
+                            </p>
+                        </li>
+                        <li>
+                            <img src="./img/about/benefit3.png">
+                            <p>Подарки на юбилей
+                                компании
+                            </p>
+                        </li>
+                    </ul>
+                </section>
+                <section style="background: #E02F2F;;" class="about__section">
+                    <h2 style="color: white" class="about__title about__title_this">Фабрика подарков - это</h2>
+                    <ul class="about__this">
+                        <li>
+                            <img src="./img/about/this1.png">
+                            <p>11-летний опыт создания подарков для детей и взрослых</p>
+                        </li>
+                        <li>
+                            <img src="./img/about/this2.png">
+                            <p>Контроль качества на каждом
+                                этапе производства. Вся
+                                продукция сертифицирована</p>
+                        </li>
+                        <li>
+                            <img src="./img/about/this3.png">
+                            <p>Персонализация подарков -
+                                яркие решения для вашей компании</p>
+                        </li>
+                        <li>
+                            <img src="./img/about/this4.png">
+                            <p>Государственные закупки -
+                                мы на портале поставщиков</p>
+                        </li>
+                    </ul>
+                </section>
+                <section style='border-bottom: 1px solid rgba(0,0,0,0.1);' class="about__section background-white">
+                    <h2 class="about__title">Как мы создаем подарки</h2>
+                    <ul class="about__create">
+                        <li>
+                            <mark>Этап 1</mark>
+                            <img src="./img/about/create1.png">
+                            <h4>Обсуждаем и предлагаем
+                                варианты будущих подарков</h4>
+                            <p>Вы получите 10 вариантов подарков,
+                                выбираете понравившийся
+                            </p>
+                        </li>
+                        <li>
+                            <mark>Этап 2</mark>
+                            <img src="./img/about/create2.png">
+                            <h4>Рассчитываем стоимость
+                                и заключаем договор
+                            </h4>
+                            <p>Достаточно предоплаты 50% от суммы, и подарки уходят в производство </p>
+                        </li>
+                        <li>
+                            <mark>Этап 3</mark>
+                            <img src="./img/about/create3.png">
+                            <h4>Запускаем в производство
+                                и доставляем до дверей офиса
+                            </h4>
+                            <p>Мы доставляем вовремя 100% заказов
+                            </p>
+                        </li>
+                    </ul>
+                </section>
+                <section style='border-bottom: 1px solid rgba(0,0,0,0.1);' class="about__section background-white">
+                    <h2 class="about__title">Нам доверяют</h2>
+                    <img class="about__trust" src="./img/about/trust.png">
+                </section>
+                <section class="about__section background-white">
+                    <div style="max-width: 850px; margin: 0 auto;" class="content">
+                        <p>«Фабрика подарков» - это магазин ярких эмоций, счастливых улыбок и искреннего восторга. Мы
+                            продаем подарки – особенные, необычные, интересные и уж точно не скучные. У нас вы найдете
+                            «Тот-самый-подарок» для родственников и друзей, взрослых и детей, для коллег и просто
+                            хороших
+                            знакомых.</p>
+                        <h3 class="red">Три любимых праздника</h3>
+                        <p>Есть всего три главных праздника в стране, когда подарки принято дарить всем вокруг. На Новый
+                            год, День защитника Отечества (23 февраля) и Международный женский день (8 марта) приятные
+                            презенты дарят врачам и учителям, коллегам по работе, партнёрам, друзьям, родственникам и,
+                            конечно, любимым.</p>
+                        <p>Мы сосредоточились именно на этих датах, подобрали самые интересные подарки, подготовили
+                            красивые упаковки. Теперь ваш презент точно не затеряется среди однотипных,
+                            «чисто-символических» подношений. Порадуйте важного для вас человека действительно
+                            необыкновенным сюрпризом.</p>
+                        <h3 class="red">
+                            Поводов много – магазин подарков один!
+                        </h3>
+                        <p>
+                            Новый год, 23 февраля, 8 марта – эти праздники ждут с нетерпением и взрослые и дети. Именно
+                            эти
+                            три даты начинают очередной год, провожают зиму и встречают весну. Хотите удивить не только
+                            родных и близких, но и коллектив своей компании? Нужны подарки для детей в школу или детский
+                            сад? Мечтаете разнообразить ассортимент своего магазина по-настоящему интересными презентами
+                            к
+                            тематическим датам?
+                        </p>
+                        <h3 class="red">Индивидуальный подход к каждому клиенту!</h3>
+                        <p style="margin-bottom: 7px;">Индивидуальный подход к каждому покупателю позволяет нам находить наиболее эффективные схемы
+                            сотрудничества.</p>
+                        <p style="margin-bottom: 7px;">Товар проходит строгий контроль качества. Вся продукция сертифицирована и соответствует ГОСТ
+                            и ТУ.</p>
+                        <p style="margin-bottom: 7px;">Мы стремимся максимально удовлетворить требования клиентов, опираясь на опыт и знания наших
+                            специалистов. Идеология предприятия основана на следующих принципах: компетентность,
+                            профессионализм, надёжность, взаимовыгодное сотрудничество.</p>
+                        <p>Реализация этих принципов плюс уважение к партнёрам, доверительность и честность деловых
+                            отношений - залог нашего успеха.</p>
+                    </div>
+                </section>
+
+
+            </div>
+            <section class="section background-white">
+    <div class="page__container">
+        <div style="max-width: 1250px;" class="section__with-arrows">
+            <h2 class="section__title section__title_left">Отзывы и благодарности</h2>
+            <div class="section__arrows">
+                <button class="arrow arrow_left swiper-button-reviews-prev "></button>
+                <button class="arrow arrow_right swiper-button-reviews-next"></button>
+            </div>
+        </div>
+        <div class="swiper reviews">
+            <div class="swiper-wrapper">
+                <img src="./img/reviews/1.png" alt="#" class="swiper-slide reviews__review">
+                <img src="./img/reviews/2.png" alt="#" class="swiper-slide reviews__review">
+                <img src="./img/reviews/3.png" alt="#" class="swiper-slide reviews__review">
+                <img src="./img/reviews/4.png" alt="#" class="swiper-slide reviews__review">
+                <img src="./img/reviews/4.png" alt="#" class="swiper-slide reviews__review">
+            </div>
+            <div class="swiper-scrollbar"></div>
+        </div>
+    </div>
+</section>
+            <section class="section section_faq">
+    <div class="page__container">
+        <form class="form form_faq">
+            <h2 class="form__title">Остались вопросы?</h2>
+            <div class="form__rows">
+                <div class="form__row">
+                    <input autocomplete="off" placeholder="Имя" name type="text" minlength="2">
+                </div>
+                <div class="form__row">
+                    <input autocomplete="off" placeholder="Email*" name required type="email">
+                </div>
+                <div class="form__row">
+                    <input autocomplete="off" minlength="17" placeholder="Телефон" name type="tel" id="phone">
+                </div>
+                <div class="form__row">
+                    <textarea minlength="5" autocomplete="off" required name placeholder="Ваш вопрос*"
+                        rows="5"></textarea>
+                </div>
+            </div>
+            <button disabled class="btn form__btn">отправить</button>
+            <div class="messengers">
+                <p class="messengers__title">Или напишите нам в мессенджеры</p>
+                <ul class="messengers__list">
+                    <li class="messengers__item">
+                        <a href="#" class="messengers__link wa">
+                            <svg>
+                                <use href="./img/icons/icons.svg#whatsapp"></use>
+                            </svg>
+                            <span>
+                                Написать в WhatsApp
+                            </span> </a>
+                    </li>
+                    <li class="messengers__item">
+                        <a href="#" class="messengers__link viber">
+                            <svg>
+                                <use href="./img/icons/icons.svg#viber"></use>
+                            </svg>
+                            <span>Написать в Viber</span></a>
+                    </li>
+                </ul>
+            </div>
+        </form>
+    </div>
+</section>
+        </main>
+        <footer class="footer">
+    <div class="page__container">
+        <div class="footer__top">
+            <a href="/" class="footer__logo"></a>
+            <nav class="footer__menu">
+                <ul>
+                    <li><a href="#">Каталог</a></li>
+                    <li><a href="#">Акции</a></li>
+                    <li><a href="#">Доставка и оплата</a></li>
+                    <li><a href="#">О нас</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+            </nav>
+            <div class="footer__info">
+                <a href="tel:+73462229001" class="phone footer__phone">
+                    <div class="background">
+                        <svg>
+                            <use href="./img/icons/icons.svg#phone"></use>
+                        </svg>
+                    </div>
+
+                    <p>+7 3462 22-90-01</p>
+                </a>
+                <div class="address footer__address">
+                    <div class="background">
+                        <svg>
+                            <use href="./img/icons/icons.svg#address"></use>
+                        </svg>
+                    </div>
+
+                    <p>Сургут, Индустриальная 34, оф. 21</p>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="footer__bottom">
+            <p class="footer__copyright">2013-2016 г., «Фабрика подарков»</p>
+            <a href="" class="footer__politics">Политика обработки персональных данных</a>
+            <ul class="social footer__social">
+                <li>
+                    <a class="social__wa" href="">
+                        <svg>
+                            <use href="./img/icons/icons.svg#whatsapp"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a class="social__vk" href="">
+                        <svg>
+                            <use href="./img/icons/icons.svg#vk"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a class="social__viber" href="">
+                        <svg>
+                            <use href="./img/icons/icons.svg#viber"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="social__message">
+                    <p>Пишите нам, <b>мы на связи</b></p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</footer>
+        <div id="photo" class="popup">
+            <div class="popup__container">
+                <div class="popup__content">
+                    <img src="" alt="Image" class="popup__img">
+                </div>
+                <button class="popup__close">✖</button>
+            </div>
+        </div>
+
+        <div id="thanks" class="popup">
+            <div class="popup__container">
+                <div class="popup__content">
+                    <p class="thanks">Ваш вопрос отправлен успешно! <br> Мы с вами свяжемся в ближайшее время!</p>
+                </div>
+                <button class="popup__close">✖</button>
+            </div>
+        </div>
+
+        <div id="filter" class="popup">
+            <div class="popup__container">
+                <div class="popup__content">
+
+                </div>
+                <button class="popup__close">✖</button>
+            </div>
+        </div>
+
+        <div id="left-menu" class="popup">
+            <div class="popup__container">
+                <div class="popup__content">
+
+                </div>
+                <button class="popup__close">✖</button>
+            </div>
+        </div>
+
+        <div id="structure-popup" class="popup">
+            <div class="popup__container">
+                <div class="popup__content">
+
+                </div>
+                <button class="popup__close">✖</button>
+            </div>
+        </div>
+
+
+    </div>
+    <script src="./js/swiper-bundle.min.js"></script>
+    <script src="./js/app.js"></script>
+</body>
+
+</html>

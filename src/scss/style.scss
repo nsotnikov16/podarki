@@ -116,7 +116,7 @@ body {
 @import "catalog";
 
 /* Детальная страница */
-@import 'detail';
+@import "detail";
 
 /* Мы фабрика подарков */
 @import "we";
@@ -125,16 +125,22 @@ body {
 @import "suppliers";
 
 /* Корзина */
-@import 'cart';
+@import "cart";
 
 /* Заказ */
-@import 'order';
+@import "order";
 
 /* Контакты */
-@import 'contacts';
+@import "contacts";
+
+/* Доставка и оплата */
+@import "delivery";
 
 /* Персонал */
-@import 'personal';
+@import "personal";
+
+/* О нас */
+@import "about";
 
 /* Отзывы и благодарности */
 @import "reviews";

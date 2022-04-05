@@ -3046,6 +3046,24 @@ body {
   margin-bottom: 0;
 }
 
+/* Доставка и оплата */
+.delivery {
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+  margin-bottom: 115px;
+}
+.delivery .content p {
+  margin-bottom: 15px;
+}
+@media (max-width: 560px) {
+  .delivery {
+    padding: 46px 15px;
+  }
+}
+
 /* Персонал */
 .personal {
   display: grid;
@@ -3158,6 +3176,222 @@ body {
 .personal__messangers p {
   margin-bottom: 8px;
 }
+/* О нас */
+.about {
+  margin-bottom: 120px;
+  border-radius: 15px;
+  overflow: hidden;
+}
+@media (max-width: 580px) {
+  .about {
+    margin-bottom: 50px;
+  }
+}
+.about__banner {
+  border-radius: 15px 15px 0 0;
+  width: 100%;
+  position: relative;
+  top: 4px;
+  object-fit: cover;
+  object-position: center;
+}
+@media (max-width: 767px) {
+  .about__banner {
+    height: 440px;
+  }
+}
+@media (max-width: 480px) {
+  .about__banner {
+    height: 325px;
+  }
+}
+@media (max-width: 320px) {
+  .about__banner {
+    height: 290px;
+  }
+}
+.about__section {
+  padding: 120px 30px 60px;
+}
+@media (max-width: 767px) {
+  .about__section {
+    padding: 45px 15px 55px;
+  }
+}
+.about__title {
+  text-align: center;
+  font-weight: 400;
+  font-size: 48px;
+  font-family: "Tenor Sans";
+  margin-bottom: 35px;
+}
+@media (max-width: 767px) {
+  .about__title {
+    font-size: 36px;
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 767px) {
+  .about__title_this {
+    text-align: left;
+  }
+}
+.about__benefit {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 211px);
+  gap: 10px;
+  justify-content: space-between;
+  max-width: 850px;
+  margin: 0 auto;
+}
+.about__benefit img {
+  height: 232px;
+  width: 100%;
+  object-fit: contain;
+  margin-bottom: 14px;
+  transform: translateX(-10px);
+}
+@media (max-width: 560px) {
+  .about__benefit img {
+    height: 198px;
+  }
+}
+.about__benefit p {
+  font-size: 18px;
+  line-height: 25px;
+  text-align: center;
+}
+@media (max-width: 560px) {
+  .about__benefit p {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+@media (max-width: 820px) {
+  .about__benefit {
+    grid-template-columns: repeat(auto-fit, 200px);
+  }
+}
+@media (max-width: 767px) {
+  .about__benefit {
+    gap: 22px 50px;
+    justify-content: center;
+  }
+}
+.about__this {
+  max-width: 850px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+@media (max-width: 1024px) {
+  .about__this {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 767px) {
+  .about__this {
+    gap: 20px;
+  }
+}
+.about__this li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 30px;
+  border-radius: 15px;
+  background-color: white;
+}
+@media (max-width: 1024px) {
+  .about__this li {
+    justify-content: initial;
+  }
+}
+@media (max-width: 560px) {
+  .about__this li {
+    padding: 25px 10px 25px 16px;
+  }
+}
+.about__this img {
+  width: 70px;
+  height: 70px;
+  margin-right: 20px;
+}
+@media (max-width: 767px) {
+  .about__this img {
+    width: 40px;
+    height: 40px;
+    margin-right: 14px;
+  }
+}
+.about__this p {
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 24px;
+}
+@media (max-width: 767px) {
+  .about__this p {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+.about__trust {
+  max-width: 850px;
+  margin: 0 auto;
+  display: block;
+  width: 100%;
+}
+.about__create {
+  max-width: 850px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 271px);
+  justify-content: space-between;
+  gap: 59px;
+}
+@media (max-width: 1290px) {
+  .about__create {
+    grid-template-columns: repeat(auto-fit, 271px);
+    justify-content: center;
+    gap: 25px 50px;
+  }
+}
+@media (max-width: 655px) {
+  .about__create {
+    justify-content: initial;
+    gap: 35px;
+  }
+}
+.about__create mark {
+  border-radius: 50px;
+  background-color: #ffaf35;
+  color: white;
+  padding: 7px 14px;
+  font-size: 21px;
+  line-height: 25px;
+  margin-bottom: 9px;
+  display: block;
+  width: max-content;
+}
+.about__create img {
+  border-radius: 25px;
+  width: 180px;
+  height: 180px;
+  margin-bottom: 25px;
+  display: block;
+}
+.about__create h4 {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 23px;
+  margin-bottom: 13px;
+}
+.about__create p {
+  font-size: 15px;
+  line-height: 21px;
+}
+
 /* Отзывы и благодарности */
 .reviews {
   max-width: 1250px;

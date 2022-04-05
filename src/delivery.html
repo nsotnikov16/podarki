@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/head.html',{
+"title":"Доставка и оплата"
+})
+
+<body>
+    <div class="page background-lightgray">
+        @@include('html/header.html',{})
+        <div class="page__top page__top_new-year">
+            <div class="page__container">
+                @@include('html/breadcrumbs.html', {})
+                <h1 class="page__title">Доставка и оплата</h1>
+            </div>
+        </div>
+        <main>
+            <div class="page__container">
+                <div class="delivery background-white">
+                    <div style="max-width: 852px;" class="content">
+                        <p>Дата доставки согласовывается при оформлении заказа. Наши специалисты свяжутся с Вами для
+                            подтверждения даты и адреса.</p>
+                        <p>При заказе от 150 подарков, доставка по Сургуту и близлежащим городам — <b
+                                class="red">бесплатная.</b></p>
+                        <p>Условия доставки в другие города и населенные пункты Тюменской и других областей можно
+                            уточнить
+                            по телефону <br> <a href="tel:+79003941418"><b>+7 (900) 394-14-18</b></a></p>
+                        <p>При заказе менее 150 подарков, доставка по Сургуту — <b>500 рублей.</b> </p>
+                        <p>Так же заказ Вы можете забрать самостоятельно из пункта выдачи, позвонив нам перед этим по
+                            телефону<br> <a href="tel:+79003941418"><b>+7 (900) 394-14-18</b></a>.</p>
+                        <p>Так же у нас предоставляется услуги грузчика, — <b>1 час 350 рублей.</b></p>
+                    </div>
+                </div>
+            </div>
+            @@include('html/faq.html', {})
+        </main>
+        @@include('html/footer.html',{})
+        <div id="photo" class="popup">
+            <div class="popup__container">
+                <div class="popup__content">
+                    <img src="" alt="Image" class="popup__img">
+                </div>
+                <button class="popup__close">✖</button>
+            </div>
+        </div>
+
+        <div id="thanks" class="popup">
+            <div class="popup__container">
+                <div class="popup__content">
+                    <p class="thanks">Ваш вопрос отправлен успешно! <br> Мы с вами свяжемся в ближайшее время!</p>
+                </div>
+                <button class="popup__close">✖</button>
+            </div>
+        </div>
+
+        <div id="filter" class="popup">
+            <div class="popup__container">
+                <div class="popup__content">
+
+                </div>
+                <button class="popup__close">✖</button>
+            </div>
+        </div>
+
+        <div id="left-menu" class="popup">
+            <div class="popup__container">
+                <div class="popup__content">
+
+                </div>
+                <button class="popup__close">✖</button>
+            </div>
+        </div>
+
+        <div id="structure-popup" class="popup">
+            <div class="popup__container">
+                <div class="popup__content">
+
+                </div>
+                <button class="popup__close">✖</button>
+            </div>
+        </div>
+
+
+    </div>
+    <script src="./js/swiper-bundle.min.js"></script>
+    <script src="./js/app.js"></script>
+</body>
+
+</html>
