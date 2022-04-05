@@ -449,3 +449,28 @@ if (selectMethodDeliveryOrder) {
 
     inputsMethodDelivery.forEach(item => item.addEventListener('click', () => checkInputDelivery(item)))
 }
+
+
+// Персонал
+
+// Имена одинаковой высоты
+const personalNames = document.querySelectorAll('.personal__name')
+if (personalNames.length > 0) {
+    let height = 0
+    personalNames.forEach(item => {
+        const heightName = item.clientHeight
+        if (heightName > height) height += heightName
+    })
+    personalNames.forEach(item => item.style.height = `${height}px`)
+}
+
+// Показать email сотрудника
+const personalEmails = document.querySelectorAll('.personal__email')
+if (personalEmails.length > 0) {
+    personalEmails.forEach(item => {
+        const hide = item.querySelector('.personal__email-hide')
+        const show = item.querySelector('.personal__email-show')
+        hide.addEventListener('click', () => { show.style.display = 'block'; hide.style.display = 'none' })
+    })
+}
+

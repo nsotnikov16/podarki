@@ -2949,15 +2949,43 @@ body {
   padding: 52px 80px 70px;
   border-radius: 15px;
 }
+@media (max-width: 820px) {
+  .contacts {
+    padding: 52px 40px 70px;
+  }
+}
+@media (max-width: 480px) {
+  .contacts {
+    padding: 45px 15px;
+  }
+}
 .contacts__container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 80px;
 }
+@media (max-width: 1150px) {
+  .contacts__container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
 .contacts__left {
   display: grid;
   grid-template-rows: max-content;
   gap: 30px 100px;
+}
+@media (max-width: 1150px) {
+  .contacts__left {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    justify-content: space-between;
+  }
+}
+@media (max-width: 480px) {
+  .contacts__left {
+    grid-template-columns: 1fr;
+  }
 }
 .contacts__block p,
 .contacts__block a {
@@ -3005,6 +3033,12 @@ body {
   overflow: hidden;
   height: 341px;
 }
+@media (max-width: 480px) {
+  .contacts__map {
+    grid-column: initial;
+    height: 200px;
+  }
+}
 .contacts__right .contacts__block {
   margin-bottom: 5px;
 }
@@ -3015,21 +3049,53 @@ body {
 /* Персонал */
 .personal {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(345px, 375px));
+  grid-template-columns: repeat(3, 1fr);
   gap: 30px;
+}
+@media (max-width: 1023px) {
+  .personal {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 640px) {
+  .personal {
+    grid-template-columns: 1fr;
+  }
 }
 .personal__item {
   background: #ffffff;
   border-radius: 15px;
   overflow: hidden;
   padding-bottom: 26px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: grid;
+  justify-items: center;
+  align-items: stretch;
 }
 .personal__item > *:not(.personal img) {
   margin-left: 45px;
   margin-right: 45px;
+}
+@media (max-width: 480px) {
+  .personal__item > *:not(.personal img) {
+    margin-left: 29px;
+    margin-right: 29px;
+  }
+}
+.personal img {
+  width: 100%;
+  height: 297px;
+  object-fit: cover;
+  object-position: top center;
+}
+@media (max-width: 620px) {
+  .personal img {
+    height: 380px;
+  }
+}
+@media (max-width: 480px) {
+  .personal img {
+    height: 297px;
+  }
 }
 .personal__name {
   font-weight: 600;
@@ -3037,6 +3103,7 @@ body {
   line-height: 29px;
   margin-top: 27px;
   margin-bottom: 7px;
+  text-align: center;
 }
 .personal__post, .personal__messangers p {
   font-size: 14px;
@@ -3080,9 +3147,13 @@ body {
 }
 .personal__email-show {
   display: none;
-  font-size: 18px;
-  line-height: 22px;
+  font-size: 15px;
+  line-height: 20px;
   text-align: center;
+  padding-bottom: 2px;
+}
+.personal__messangers {
+  align-self: end;
 }
 .personal__messangers p {
   margin-bottom: 8px;
