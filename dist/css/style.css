@@ -684,6 +684,7 @@ body {
   background-image: url(../img/form_faq.png);
   background-size: cover;
   background-repeat: no-repeat;
+  padding-bottom: 50px;
 }
 @media (max-width: 1024px) {
   .section {
@@ -1708,6 +1709,59 @@ body {
   top: 40%;
   left: -3px;
   transform: rotate(45deg);
+}
+
+.social2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+@media (max-width: 1023px) {
+  .social2 {
+    display: none;
+  }
+}
+@media (max-width: 580px) {
+  .social2 {
+    margin-top: 25px;
+  }
+}
+.social2 li {
+  margin-right: 20px;
+  margin-bottom: 15px;
+}
+.social2 li:last-child {
+  margin-right: 0;
+}
+.social2 a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.social2 a:hover div {
+  background: #ffaf35;
+}
+.social2 a:hover span {
+  color: #e02f2f;
+}
+.social2 div {
+  width: 60px;
+  border-radius: 50%;
+  background: #e02f2f;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.social2 div svg {
+  width: 28px;
+  height: 28px;
+}
+.social2 span {
+  margin-left: 24px;
+  font-size: 36px;
+  line-height: 49px;
 }
 
 /* Формы */
@@ -3424,6 +3478,85 @@ body {
 .reviews .swiper-scrollbar-drag {
   background: #dbe6f4;
   border-radius: 50px;
+}
+
+/* Баннеры */
+.banner {
+  position: relative;
+}
+.banner__img {
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  object-fit: cover;
+  object-position: top center;
+}
+.banner__img_small {
+  display: none;
+}
+.banner__img_big {
+  display: block;
+}
+@media (max-width: 767px) {
+  .banner__img_small {
+    display: block;
+  }
+  .banner__img_big {
+    display: none;
+  }
+}
+.banner .page__container {
+  transform: translateX(50px);
+}
+.banner__main {
+  /* background: #ffffff; */
+  position: relative;
+  z-index: 9;
+  max-width: 545px;
+  /* opacity: 0.7;
+  filter: blur(40px); */
+}
+.banner__main::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  left: -20px;
+  bottom: -20px;
+  background: #ffffff;
+  opacity: 0.8;
+  z-index: -1;
+  border-radius: 13px;
+  filter: blur(40px);
+}
+.banner__title {
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 60px;
+}
+.banner__subtitle {
+  font-family: "Tenor Sans";
+  font-size: 24px;
+  line-height: 31px;
+  margin-top: 13px;
+  max-width: 65%;
+}
+.banner__btn {
+  margin-top: 37px;
+  display: inline-block;
+  padding: 16px 20px;
+}
+
+.swiper-banner {
+  height: 750px;
+}
+.swiper-banner .swiper-slide {
+  padding-top: 135px;
 }
 
 /* Шапка */

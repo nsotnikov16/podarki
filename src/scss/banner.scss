@@ -1,0 +1,101 @@
+.banner {
+    position: relative;
+    &__img {
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+
+        object-fit: cover;
+        object-position: top center;
+        &_small {
+            display: none;
+        }
+
+        &_big {
+            display: block;
+        }
+        @media (max-width: 767px) {
+            &_small {
+                display: block;
+            }
+
+            &_big {
+                display: none;
+            }
+        }
+    }
+    .page__container {
+        transform: translateX(50px);
+    }
+    &__main {
+        
+        /* background: #ffffff; */
+        position: relative;
+
+        z-index: 9;
+        max-width: 545px;
+        /* opacity: 0.7;
+        filter: blur(40px); */
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            left: -20px;
+            bottom: -20px;
+            background: #ffffff;
+            opacity: 0.8;
+            z-index: -1;
+            border-radius: 13px;
+            filter: blur(40px); 
+        }
+    }
+
+    &__title {
+        font-weight: 400;
+        font-size: 50px;
+        line-height: 60px;
+    }
+
+    &__subtitle {
+        font-family: "Tenor Sans";
+        font-size: 24px;
+        line-height: 31px;
+
+        margin-top: 13px;
+        max-width: 65%;
+    }
+
+    &__btn {
+        margin-top: 37px;
+        display: inline-block;
+        padding: 16px 20px;
+    }
+}
+.swiper {
+}
+.swiper-banner {
+    height: 750px;
+
+    .swiper-slide {
+        padding-top: 135px;
+    }
+}
+.swiper-button-next {
+}
+.swiper-button-prev {
+}
+.swiper-wrapper {
+}
+.swiper-slide {
+}
+.btn {
+}
+.swiper-pagination {
+}
