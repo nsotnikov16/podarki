@@ -1,0 +1,88 @@
+.contacts {
+    padding: 52px 80px 70px;
+    border-radius: 15px;
+    &__container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 80px;
+    }
+
+    &__left {
+        display: grid;
+        grid-template-rows: max-content;
+        gap: 30px 100px;
+    }
+
+    &__block {
+        p,
+        a {
+            font-size: 13px;
+            line-height: 18px;
+            padding-left: 23px;
+        }
+        h4 {
+            display: flex;
+            align-items: center;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 25px;
+            margin-bottom: 3px;
+            color: #e02f2f;
+            &::before {
+                content: "";
+                width: 15px;
+                height: 15px;
+                background-repeat: no-repeat;
+                background-size: 15px 15px;
+                margin-right: 8px;
+                flex-shrink: 0;
+            }
+        }
+
+        &.contacts__block_phone {
+            h4::before {
+                background-image: url(../img/icons/icons.svg#phone);
+            }
+        }
+        &.contacts__block_address {
+            h4::before {
+                background-image: url(../img/icons/icons.svg#address);
+            }
+        }
+        &.contacts__block_email {
+            h4::before {
+                background-image: url(../img/icons/icons.svg#email);
+            }
+        }
+        &.contacts__block_requisites {
+            h4::before {
+                background-image: url(../img/icons/icons.svg#req);
+            }
+        }
+        &.contacts__block_time {
+            h4::before {
+                background-image: url(../img/icons/icons.svg#clock);
+            }
+        }
+    }
+
+    &__map {
+        border-radius: 5px;
+        grid-column: 1/3;
+        align-self: end;
+        overflow: hidden;
+        height: 341px;
+    }
+
+    &__right {
+        .contacts__block {
+            margin-bottom: 5px;
+        }
+    }
+
+    .content {
+        p {
+            margin-bottom: 0;
+        }
+    }
+}

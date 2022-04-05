@@ -2944,6 +2944,149 @@ body {
   }
 }
 
+/* Контакты */
+.contacts {
+  padding: 52px 80px 70px;
+  border-radius: 15px;
+}
+.contacts__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+}
+.contacts__left {
+  display: grid;
+  grid-template-rows: max-content;
+  gap: 30px 100px;
+}
+.contacts__block p,
+.contacts__block a {
+  font-size: 13px;
+  line-height: 18px;
+  padding-left: 23px;
+}
+.contacts__block h4 {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 25px;
+  margin-bottom: 3px;
+  color: #e02f2f;
+}
+.contacts__block h4::before {
+  content: "";
+  width: 15px;
+  height: 15px;
+  background-repeat: no-repeat;
+  background-size: 15px 15px;
+  margin-right: 8px;
+  flex-shrink: 0;
+}
+.contacts__block.contacts__block_phone h4::before {
+  background-image: url(../img/icons/icons.svg#phone);
+}
+.contacts__block.contacts__block_address h4::before {
+  background-image: url(../img/icons/icons.svg#address);
+}
+.contacts__block.contacts__block_email h4::before {
+  background-image: url(../img/icons/icons.svg#email);
+}
+.contacts__block.contacts__block_requisites h4::before {
+  background-image: url(../img/icons/icons.svg#req);
+}
+.contacts__block.contacts__block_time h4::before {
+  background-image: url(../img/icons/icons.svg#clock);
+}
+.contacts__map {
+  border-radius: 5px;
+  grid-column: 1/3;
+  align-self: end;
+  overflow: hidden;
+  height: 341px;
+}
+.contacts__right .contacts__block {
+  margin-bottom: 5px;
+}
+.contacts .content p {
+  margin-bottom: 0;
+}
+
+/* Персонал */
+.personal {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(345px, 375px));
+  gap: 30px;
+}
+.personal__item {
+  background: #ffffff;
+  border-radius: 15px;
+  overflow: hidden;
+  padding-bottom: 26px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.personal__item > *:not(.personal img) {
+  margin-left: 45px;
+  margin-right: 45px;
+}
+.personal__name {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+  margin-top: 27px;
+  margin-bottom: 7px;
+}
+.personal__post, .personal__messangers p {
+  font-size: 14px;
+  line-height: 17px;
+  color: #333333;
+  opacity: 0.5;
+}
+.personal__phone {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  margin-top: 28px;
+  margin-bottom: 9px;
+}
+.personal__phone::before {
+  content: "";
+  background-image: url(../img/icons/icons.svg#phone);
+  width: 15px;
+  height: 15px;
+  background-size: 15px 15px;
+  background-repeat: no-repeat;
+  margin-right: 7px;
+}
+.personal__email {
+  margin-top: 9px;
+  margin-bottom: 29px;
+}
+.personal__email-hide {
+  font-size: 15px;
+  line-height: 18px;
+  padding-bottom: 2px;
+  border-bottom: 1px dotted #60a5fa;
+  color: #60a5fa;
+}
+.personal__email-hide:hover {
+  cursor: pointer;
+  border-bottom: 1px dotted #e02f2f;
+  color: #e02f2f;
+}
+.personal__email-show {
+  display: none;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+}
+.personal__messangers p {
+  margin-bottom: 8px;
+}
 /* Отзывы и благодарности */
 .reviews {
   max-width: 1250px;
