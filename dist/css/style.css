@@ -2769,12 +2769,6 @@ body {
 }
 
 /* Заказ */
-.order {
-  /*  background-color: white;
-     padding: 60px;
-     border-radius: 15px;
-  */
-}
 .order .form__title {
   font-family: "Tenor Sans";
 }
@@ -2883,12 +2877,71 @@ body {
   font-size: 21px;
   line-height: 25px;
 }
+@media (max-width: 767px) {
+  .order__item {
+    grid-template-columns: 70px max-content 1fr max-content;
+    align-items: center;
+  }
+  .order__photo {
+    width: 70px;
+    grid-column: 1/2;
+    grid-row: 1/3;
+    align-self: flex-start;
+  }
+  .order__name {
+    grid-column: 2/5;
+  }
+  .order .counter {
+    width: 80px;
+  }
+  .order .form__title {
+    font-size: 30px;
+    line-height: 34px;
+    text-align: center;
+  }
+  .order .form__row {
+    max-height: 50px;
+  }
+  .order__export {
+    font-size: 13px;
+    line-height: 20px;
+    padding: 12px;
+  }
+}
+@media (max-width: 480px) {
+  .order__total {
+    flex-direction: column;
+    align-items: initial;
+  }
+  .order__total p {
+    margin-bottom: 8px;
+  }
+}
+@media (max-width: 374px) {
+  .order .counter {
+    width: 70px;
+  }
+}
 
 .order-swiper {
   border-radius: 15px;
   background-color: white;
   padding: 40px 60px;
   max-height: 90vh;
+}
+.order-swiper .swiper-scrollbar {
+  width: 3px;
+}
+@media (max-width: 767px) {
+  .order-swiper {
+    width: 90vw;
+    padding: 40px calc(15px + 76.5 * (100vw - 375px) / 767);
+  }
+}
+@media (max-width: 374px) {
+  .order-swiper {
+    width: 95vw;
+  }
 }
 
 /* Отзывы и благодарности */

@@ -316,7 +316,7 @@ function hasInvalidInput(elements) {
 if (forms.length > 0) {
     forms.forEach(form => {
         const elements = Array.from(form.elements)
-        const button = form.querySelector('button')
+        const button = form.querySelector('.form__btn')
         if (elements.length > 0) {
             elements.forEach(item => {
                 if (['INPUT', 'TEXTAREA'].includes(item.tagName)) {
@@ -443,11 +443,9 @@ if (selectMethodDeliveryOrder) {
             orderAddres.style.display = 'none'
             orderExport.style.display = 'block'
             inputAddress.required = false
+            inputAddress.value = ''
         }
     }
 
     inputsMethodDelivery.forEach(item => item.addEventListener('click', () => checkInputDelivery(item)))
 }
-
-
-if (popupsObj['order']) popupsObj['order'].open()
