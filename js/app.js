@@ -433,7 +433,6 @@ if (selectMethodDeliveryOrder) {
     const inputAddress = orderAddres.querySelector('input')
 
     function checkInputDelivery(input) {
-        console.log(Array.from(inputsMethodDelivery))
         Array.from([orderExport, orderAddres]).forEach(el => replaceClass(el, 'd-block', 'd-none'))
         if (input.id === 'courier') {
             replaceClass(orderAddres, 'd-none', 'd-block')
@@ -448,7 +447,21 @@ if (selectMethodDeliveryOrder) {
         }
     }
 
-    Array.from(inputsMethodDelivery).forEach(item => item.addEventListener('change', () => checkInputDelivery(item)))
+    /* Array.from(inputsMethodDelivery).forEach(item => item.addEventListener('change', () => checkInputDelivery(item))) */
+    inputsMethodDelivery.forEach(input => input.addEventListener('click', () => {
+        Array.from([orderExport, orderAddres]).forEach(el => replaceClass(el, 'd-block', 'd-none'))
+        if (input.id === 'courier') {
+            replaceClass(orderAddres, 'd-none', 'd-block')
+            replaceClass(orderExport, 'd-block', 'd-none')
+            inputAddress.required = true
+
+        } else if (input.id === 'export') {
+            replaceClass(orderAddres, 'd-block', 'd-none')
+            replaceClass(orderExport, 'd-none', 'd-block')
+            inputAddress.required = false
+            inputAddress.value = ''
+        }
+    }))
 }
 
 
