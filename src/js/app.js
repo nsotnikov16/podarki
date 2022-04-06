@@ -447,7 +447,7 @@ if (selectMethodDeliveryOrder) {
         }
     }
 
-    inputsMethodDelivery.forEach(item => item.addEventListener('click', () => checkInputDelivery(item)))
+    inputsMethodDelivery.forEach(item => item.addEventListener('change', () => checkInputDelivery(item)))
 }
 
 
