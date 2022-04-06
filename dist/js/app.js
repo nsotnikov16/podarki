@@ -434,12 +434,12 @@ if (selectMethodDeliveryOrder) {
 
     function checkInputDelivery(input) {
         Array.from([orderExport, orderAddres]).forEach(el => replaceClass(el, 'd-block', 'd-none'))
-        if (input.id == 'courier') {
+        if (input.id === 'courier') {
             replaceClass(orderAddres, 'd-none', 'd-block')
             replaceClass(orderExport, 'd-block', 'd-none')
             inputAddress.required = true
 
-        } else if (input.id == 'export') {
+        } else if (input.id === 'export') {
             replaceClass(orderAddres, 'd-block', 'd-none')
             replaceClass(orderExport, 'd-none', 'd-block')
             inputAddress.required = false
