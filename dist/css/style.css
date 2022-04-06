@@ -426,6 +426,10 @@ body {
   font-family: "Museo Sans Cyrl";
 }
 
+button {
+  color: #333333;
+}
+
 /* main {
   margin-bottom: 82px;
 } */
@@ -1000,6 +1004,14 @@ body {
 }
 .share:hover span {
   border-bottom: 1px dotted #e02f2f;
+}
+
+.d-none {
+  display: none;
+}
+
+.d-block {
+  display: block;
 }
 
 /* Хлебные крошки */

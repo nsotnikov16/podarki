@@ -203,7 +203,7 @@
       max-width: 80%;
       margin: 0 auto 25px;
     }
-    @media(max-width: 480px) {
+    @media (max-width: 480px) {
       max-width: 100%;
     }
 
@@ -508,4 +508,12 @@
       border-bottom: 1px dotted $red;
     }
   }
+}
+
+.d-none {
+  display: none;
+}
+
+.d-block {
+  display: block;
 }
