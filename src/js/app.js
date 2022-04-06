@@ -432,7 +432,7 @@ if (selectMethodDeliveryOrder) {
     const inputsMethodDelivery = selectMethodDeliveryOrder.querySelectorAll('input')
     const inputAddress = orderAddres.querySelector('input')
 
-    function checkInputDelivery(input) {
+    inputsMethodDelivery.forEach(input => input.addEventListener('click', () => {
         Array.from([orderExport, orderAddres]).forEach(el => replaceClass(el, 'd-block', 'd-none'))
         if (input.id === 'courier') {
             replaceClass(orderAddres, 'd-none', 'd-block')
@@ -445,9 +445,7 @@ if (selectMethodDeliveryOrder) {
             inputAddress.required = false
             inputAddress.value = ''
         }
-    }
-
-    inputsMethodDelivery.forEach(item => item.addEventListener('change', () => checkInputDelivery(item)))
+    }))
 }
 
 

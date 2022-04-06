@@ -101,6 +101,11 @@
       color: white;
     }
 
+    @media(min-width: 1025px) {
+      font-size: 18px;
+      font-weight: 600;
+    }
+
     @media (max-width: 1024px) {
       margin: 30px auto 0;
       padding: 18px 25px;
@@ -366,13 +371,11 @@
   }
 
   input {
-    /* margin: 0 15px; */
     width: 10px;
     text-align: center;
     font-size: 15px;
     @media (max-width: 660px) {
-      font-size: 10px;
-      /* margin: 0 4px; */
+      font-size: 13px;
     }
   }
 }
