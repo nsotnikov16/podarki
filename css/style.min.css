@@ -611,6 +611,12 @@ button {
 .btn_all:hover {
   color: white;
 }
+@media (min-width: 1025px) {
+  .btn_all {
+    font-size: 18px;
+    font-weight: 600;
+  }
+}
 @media (max-width: 1024px) {
   .btn_all {
     margin: 30px auto 0;
@@ -864,15 +870,13 @@ button {
   }
 }
 .counter input {
-  /* margin: 0 15px; */
   width: 10px;
   text-align: center;
   font-size: 15px;
 }
 @media (max-width: 660px) {
   .counter input {
-    font-size: 10px;
-    /* margin: 0 4px; */
+    font-size: 13px;
   }
 }
 
@@ -1078,7 +1082,7 @@ button {
 }
 .menu__item a {
   font-weight: 400;
-  font-size: 15px;
+  font-size: 16px;
   line-height: 18px;
 }
 .menu__item a:hover {
@@ -1167,6 +1171,7 @@ button {
 @media (max-width: 560px) {
   .left-menu {
     max-width: 90vw;
+    min-width: 80vw;
   }
 }
 .left-menu__list {
@@ -2253,7 +2258,7 @@ button {
   line-height: 25px;
 }
 .detail__specifications td:nth-child(1) {
-  opacity: 0.5;
+  opacity: 0.7;
   padding-right: 10px;
 }
 .detail__specifications td:nth-child(2) {
@@ -2588,7 +2593,7 @@ button {
 .suppliers__subtitle {
   font-size: 16px;
   line-height: 26px;
-  color: rgba(51, 51, 51, 0.5);
+  color: #333333;
   margin-bottom: 40px;
 }
 .suppliers__list {
@@ -3619,13 +3624,19 @@ button {
 }
 .banner__btn {
   margin-top: 37px;
+  font-size: 17px;
+  line-height: 20px;
+  font-weight: 600;
   display: inline-block;
-  padding: 16px 20px;
+  padding: 20px 30px;
 }
 @media (max-width: 767px) {
   .banner__btn {
     padding: 16px;
     margin-top: 30px;
+    font-size: 15px;
+    line-height: 18px;
+    font-weight: 400;
   }
 }
 
@@ -3733,9 +3744,6 @@ button {
   max-width: 230px;
   grid-column: 2/3;
   grid-row: 1/2;
-  font-size: 12px;
-  line-height: 14px;
-  /* opacity: 0.7; */
 }
 .header__address svg {
   margin-right: 7px;
@@ -3744,6 +3752,11 @@ button {
   font-size: 15px;
   line-height: 18px;
   opacity: 1;
+}
+.header__address span:nth-child(2) {
+  opacity: 0.7;
+  font-size: 12px;
+  line-height: 14px;
 }
 .header__menu {
   grid-column: 3/5;
