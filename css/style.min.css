@@ -1006,6 +1006,14 @@ button {
   border-bottom: 1px dotted #e02f2f;
 }
 
+.d-none {
+  display: none;
+}
+
+.d-block {
+  display: block;
+}
+
 /* Хлебные крошки */
 .breadcrumbs {
   display: flex;

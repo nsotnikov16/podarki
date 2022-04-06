@@ -433,15 +433,15 @@ if (selectMethodDeliveryOrder) {
     const inputAddress = orderAddres.querySelector('input')
 
     function checkInputDelivery(input) {
-        Array.from([orderExport, orderAddres]).forEach(el => el.style.display = 'none')
+        Array.from([orderExport, orderAddres]).forEach(el => replaceClass(el, 'd-block', 'd-none'))
         if (input.id == 'courier') {
-            orderAddres.style.display = 'block'
-            orderExport.style.display = 'none'
+            replaceClass(orderAddres, 'd-none', 'd-block')
+            replaceClass(orderExport, 'd-block', 'd-none')
             inputAddress.required = true
 
         } else if (input.id == 'export') {
-            orderAddres.style.display = 'none'
-            orderExport.style.display = 'block'
+            replaceClass(orderAddres, 'd-block', 'd-none')
+            replaceClass(orderExport, 'd-none', 'd-block')
             inputAddress.required = false
             inputAddress.value = ''
         }
@@ -485,3 +485,8 @@ var swiperBanner = new Swiper(".swiper-banner", {
         el: '.swiper-banner .swiper-pagination',
     },
 });
+
+function replaceClass(el, oldClass, newClass) {
+    el.classList.remove(oldClass)
+    el.classList.add(newClass)
+}
