@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+	<link rel="stylesheet" href="css/style.css">
+	<!-- <script src="https://api-maps.yandex.ru/2.1/?apikey=613b8b9b-619b-4e88-88da-82b9980c3fee&lang=ru_RU"
+		type="text/javascript"></script> -->
+	<title>Каталог</title>
+</head>
+
+<body>
+    <div class="page background-lightgray">
+        <header class="header background-white">
+    <div class="header__container page__container">
+        <a href="/" class="header__logo"></a>
+        <div class="address header__address">
+            <svg>
+                <use href="./img/icons/icons.svg#address"></use>
+            </svg>
+            <p><span>Сургут</span> Индустриальная 34, оф. 21</p>
+        </div>
+        <ul class="menu header__menu">
+            <li class="menu__item menu__item_dropdown">
+                <a class="menu__link" href="#">Каталог</a>
+                <div class="menu__expand copy">
+                    <ul class="menu__list-dropdown">
+                        <li><a href="#">Подарки на 23 февраля</a></li>
+                        <li><a href="#">Подарки на 8 марта</a></li>
+                        <li><a href="#">Подарки на НГ</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="menu__item"><a class="menu__link" href="#">Акции</a></li>
+            <li class="menu__item"><a class="menu__link" href="#">Доставка и оплата</a></li>
+            <li class="menu__item"><a class="menu__link" href="#">О нас</a></li>
+            <li class="menu__item"><a class="menu__link" href="#">Контакты</a></li>
+        </ul>
+        <a href="tel:+73462229001" class="phone header__phone">
+            <svg>
+                <use href="./img/icons/icons.svg#phone"></use>
+            </svg>
+            <p>+7 3462 22-90-01</p>
+        </a>
+        <div class="header__catalog">
+            <a class="btn btn_catalog" href="">
+                <svg>
+                    <use href="./img/icons/icons.svg#btn_catalog"></use>
+                </svg>
+                <span>Каталог подарков</span>
+            </a>
+        </div>
+        <form class="form search">
+            <div class="form__row">
+                <input type="text" placeholder="Поиск подарка" minlength="2" />
+                <svg class="search__btn search__btn_inForm">
+                    <use href="./img/icons/icons.svg#search"></use>
+                </svg>
+            </div>
+        </form>
+        <ul class="social header__social">
+            <li>
+                <a class="social__wa" href="">
+                    <svg>
+                        <use href="./img/icons/icons.svg#whatsapp"></use>
+                    </svg>
+                </a>
+            </li>
+            <li>
+                <a class="social__vk" href="">
+                    <svg>
+                        <use href="./img/icons/icons.svg#vk"></use>
+                    </svg>
+                </a>
+            </li>
+            <li>
+                <a class="social__viber" href="">
+                    <svg>
+                        <use href="./img/icons/icons.svg#viber"></use>
+                    </svg>
+                </a>
+            </li>
+        </ul>
+        <a href="" class="btn header__cart">
+            <svg>
+                <use href="./img/icons/icons.svg#cart"></use>
+            </svg>
+            <span>18 500 р.</span>
+            <span class="header__cart-count">2</span>
+        </a>
+    </div>
+    <div class="header__mobile">
+        <div class="header__mobile-left">
+            <div class="header__burger">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+
+        <div class="header__mobile-right">
+            <form class="form search">
+                <div class="form__row">
+                    <input type="text" placeholder="Поиск подарка" minlength="2" />
+                    <svg class="search__btn search__btn_inForm">
+                        <use href="./img/icons/icons.svg#search"></use>
+                    </svg>
+                    <div class="search__close">
+                        <span></span><span></span>
+                    </div>
+                </div>
+                <svg class="search__btn search__btn_outForm">
+                    <use href="./img/icons/icons.svg#search"></use>
+                </svg>
+            </form>
+            
+            <a href="tel:+73462229001" class="header__mobile-phone"></a>
+            <a href="" class="btn header__cart">
+                <div style="position: relative;">
+                    <svg>
+                        <use href="./img/icons/icons.svg#cart"></use>
+                    </svg>
+                    <span class="header__cart-count">2</span>
+                </div>
+                <span>18 500 р.</span>
+            </a>
+        </div>
+        <div class="header__mobile-bottom">
+            <div class="header__mobile-info"></div>
+        </div>
+    </div>
+
+</header>
+        <div class="page__top page__top_new-year">
+            <div class="page__container">
+                
+    <ul class="breadcrumbs">
+        <li>
+            <a href="#">Главная</a>
+        </li>
+        <li>
+            <a href="#">Каталог</a>
+        </li>
+        <li>
+            <p>Подарки на новый год</p>
+        </li>
+    </ul>
+    
+                <h1 class="page__title">Новогодняя фура купить в Сургуте</span></h1>
+            </div>
+        </div>
+        <main>
+            <div class="page__container">
+                <div class="detail">
+                    <section class="detail__section">
+
+                        <div class="detail__product">
+                            <div class="detail__product-left">
+                                <ul class="labels">
+                                    <li style="background:#0FB429;">
+                                        <img src="./img/labels/1.png">
+                                        <span>Новинка</span>
+                                    </li>
+                                    <li style="background:#5B3AB9;">
+                                        <img src="./img/labels/3.png">
+                                        <span>Хит</span>
+                                    </li>
+                                    <li style="background:#E02F2F;">
+                                        <img src="./img/labels/2.png">
+                                        <span>Акция</span>
+                                    </li>
+                                </ul>
+                                <div thumbsslider class="swiper detail-swiper-thumbs">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <img src="./img/items/1.png">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="./img/items/2.png">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="./img/items/3.png">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="./img/items/3.png">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="./img/items/3.png">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper detail-swiper">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <img src="./img/items/1.png">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="./img/items/2.png">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="./img/items/3.png">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="./img/items/3.png">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="./img/items/3.png">
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="share">
+                                    <svg>
+                                        <use href="./img/icons/icons.svg#share"></use>
+                                    </svg>
+                                    <span>Поделиться</span>
+                                </button>
+                            </div>
+                            <div class="detail__product-right">
+                                <p class="detail__article">Арт. 148554</p>
+                                <div class="detail__price">
+                                    <span class="old">890 р</span>
+                                    <span class="new">712 р
+                                        <span class="percent">-20%</span>
+                                    </span>
+                                </div>
+                                <div class="catalog__to-cart">
+                                    <div class="counter">
+                                        <button class="counter__symbol minus">-</button>
+                                        <input type="text" value="1">
+                                        <button class="counter__symbol plus">+</button>
+                                    </div>
+                                    <button class="btn">В корзину</button>
+                                </div>
+                                <p style="font-size: 15px; line-height: 18px; opacity: 0.5;">Другие варианты</p>
+                                <ul class="weight">
+                                    <li><a class="active" href="">800 г.</a></li>
+                                    <li><a href="">500 г.</a></li>
+                                    <li><a href="">350 г.</a></li>
+                                </ul>
+                                <table class="detail__specifications">
+                                    <tr>
+                                        <td>Материал:</td>
+                                        <td>Картон</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Размеры:</td>
+                                        <td>20х10х10см</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Вес:</td>
+                                        <td>800 гр</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Состав:</td>
+                                        <td>28 конфет</td>
+                                    </tr>
+                                </table>
+                                <button href="#structure" onclick="showAllStructure(this)" class="detail__scroll">Смотреть состав подарка</button>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="detail__section">
+                        <div class="detail__parameters">
+                            <div class="detail__parameters-left">
+                                <h3 class="detail__title">Параметры подарка</h3>
+
+                                <div class="detail__length">
+                                    <p class="detail__weight">800 гр</p>
+                                </div>
+                                <div class="detail__width-height"></div>
+                                <p class="detail__size height">10 см</p>
+                                <p class="detail__size length">20 см </p>
+                                <p class="detail__size width"> 10 см</p>
+                            </div>
+                            <div class="detail__parameters-right">
+                                <h3 class="detail__title">Картон, УФ лак.</h3>
+                                <div class="content">
+                                    <p>
+                                        Если вы ищете оригинальный новогодний подарок, то «Новогодняя фура» станет
+                                        настоящей находкой. Он имеет форму смартфона, которая прорисована с особой
+                                        тщательностью и учетом всех технических деталей, поэтому подключив воображение,
+                                        ребенок может играть с ним, разговаривая по видеосвязи с символом наступающего
+                                        года и загадывая желания. За плотным картоном скрываются вкусные шоколадные и
+                                        желейные конфеты, вафли, шоколадные фигурки и нежное суфле. В подарке
+                                        используются только сладкие угощения от известных и проверенных производителей,
+                                        в числе которых Марс, Конти, Красный Октябрь и пр.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section id="structure" class="detail__section">
+
+                        <div class="detail__structure">
+                            <h3 class="detail__title">Состав подарка</h3>
+                            <ul class="detail__structure-list">
+                                <li>
+                                    <div>
+                                        <img src="./img/slavyanka.png">
+                                        <h3>Славяночка шоколадная</h3>
+                                        <p>Славянка</p>
+                                    </div>
+                                    <p>1 шт.</p>
+                                </li>
+                                <li>
+                                    <div>
+                                        <img src="./img/slavyanka.png">
+                                        <h3>Славяночка шоколадная</h3>
+                                        <p>Славянка</p>
+                                    </div>
+                                    <p>3 шт.</p>
+                                </li>
+                                <li>
+                                    <div>
+                                        <img src="./img/slavyanka.png">
+                                        <h3>Славяночка шоколадная</h3>
+                                        <p>Славянка</p>
+                                    </div>
+                                    <p>2 шт.</p>
+                                </li>
+                                <li>
+                                    <div>
+                                        <img src="./img/slavyanka.png">
+                                        <h3>Славяночка шоколадная</h3>
+                                        <p>Славянка</p>
+                                    </div>
+                                    <p>1 шт.</p>
+                                </li>
+                                <li>
+                                    <div>
+                                        <img src="./img/slavyanka.png">
+                                        <h3>Славяночка шоколадная</h3>
+                                        <p>Славянка</p>
+                                    </div>
+                                    <p>1 шт.</p>
+                                </li>
+                                <li>
+                                    <div>
+                                        <img src="./img/slavyanka.png">
+                                        <h3>Славяночка шоколадная</h3>
+                                        <p>Славянка</p>
+                                    </div>
+                                    <p>3 шт.</p>
+                                </li>
+                                <li>
+                                    <div>
+                                        <img src="./img/slavyanka.png">
+                                        <h3>Славяночка шоколадная</h3>
+                                        <p>Славянка</p>
+                                    </div>
+                                    <p>1 шт.</p>
+                                </li>
+                                <li>
+                                    <div>
+                                        <img src="./img/slavyanka.png">
+                                        <h3>Славяночка шоколадная</h3>
+                                        <p>Славянка</p>
+                                    </div>
+                                    <p>1 шт.</p>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <section class="section background-white">
+    <div class="page__container">
+        <div style="max-width: 1250px;" class="section__with-arrows">
+            <h2 class="section__title section__title_left">Похожие товары</h2>
+            <div class="section__arrows">
+                <button class="arrow arrow_left swiper-button-popular-prev "></button>
+                <button class="arrow arrow_right swiper-button-popular-next"></button>
+            </div>
+        </div>
+        <div class="swiper popular">
+            <div class="swiper-wrapper swiper-wrapper-popular">
+                <div class="swiper-slide">
+                    <li class="catalog__item ">
+                        <div class="catalog__item-top">
+                            <div class="swiper catalog__swiper">
+                                <ul class="labels">
+                                    <li style="background:#0FB429;">
+                                        <img src="./img/labels/1.png" alt="#">
+                                        <span>Новинка</span>
+                                    </li>
+                                </ul>
+                                <div class="swiper-wrapper">
+                                    <a href="#" class="swiper-slide">
+                                        <img class="catalog__photo" src="./img/items/2.png" alt="#">
+                                    </a>
+                                </div>
+                                <div onclick="location.assign('/masters/avelina/')" class="swiper-pagination"></div>
+                            </div>
+                            <a href="#" class="catalog__name">"Новогодняя фура" 800 г.</a>
+                        </div>
+                        <div class="catalog__item-bottom">
+                            <ul class="weight">
+                                <li><a class="active" href="">800 г.</a></li>
+                                <li><a href="">500 г.</a></li>
+                                <li><a href="">350 г.</a></li>
+                            </ul>
+                            <p class="catalog__price">
+                                1 430 руб.
+                            </p>
+                            <div class="catalog__to-cart">
+                                <div class="counter">
+                                    <button class="counter__symbol minus">-</button>
+                                    <input type="text" value="1">
+                                    <button class="counter__symbol plus">+</button>
+                                </div>
+                                <button class="btn">В корзину</button>
+                            </div>
+                        </div>
+                    </li>
+                </div>
+                <div class="swiper-slide">
+                    <li class="catalog__item">
+                        <div class="catalog__item-top">
+                            <div class="swiper catalog__swiper">
+                                <ul class="labels">
+                                    <li style="background:#0FB429;">
+                                        <img src="./img/labels/1.png" alt="#">
+                                        <span>Новинка</span>
+                                    </li>
+                                    <li style="background:#E02F2F;">
+                                        <img src="./img/labels/2.png" alt="#">
+                                        <span>Акция</span>
+                                    </li>
+                                </ul>
+                                <div class="swiper-wrapper">
+                                    <a href="#" class="swiper-slide">
+                                        <img class="catalog__photo" src="./img/items/3.png" alt="#">
+                                    </a>
+                                    <a href="#" class="swiper-slide">
+                                        <img class="catalog__photo" src="./img/items/1.png" alt="#">
+                                    </a>
+                                    <a href="#" class="swiper-slide">
+                                        <img class="catalog__photo" src="./img/items/2.png" alt="#">
+                                    </a>
+
+                                </div>
+                                <div onclick="location.assign('/masters/avelina/')" class="swiper-pagination"></div>
+                            </div>
+                            <a href="#" class="catalog__name">Коробка подарочная «Best
+                                man»</a>
+                        </div>
+                        <div class="catalog__item-bottom">
+                            <p class="catalog__price">
+                                130 руб.
+                            </p>
+                            <div class="catalog__to-cart">
+                                <div class="counter">
+                                    <button class="counter__symbol minus">-</button>
+                                    <input type="text" value="1">
+                                    <button class="counter__symbol plus">+</button>
+                                </div>
+                                <button class="btn">В корзину</button>
+                            </div>
+                        </div>
+
+                    </li>
+                </div>
+                <div class="swiper-slide">
+                    <li class="catalog__item ">
+                        <div class="catalog__item-top">
+                            <div class="swiper catalog__swiper">
+                                <ul class="labels">
+                                    <li style="background:#0FB429;">
+                                        <img src="./img/labels/1.png" alt="#">
+                                        <span>Новинка</span>
+                                    </li>
+                                    <li style="background:#5B3AB9;">
+                                        <img src="./img/labels/3.png" alt="#">
+                                        <span>Хит</span>
+                                    </li>
+                                    <li style="background:#E02F2F;">
+                                        <img src="./img/labels/2.png" alt="#">
+                                        <span>Акция</span>
+                                    </li>
+                                </ul>
+                                <div class="swiper-wrapper">
+                                    <a href="#" class="swiper-slide">
+                                        <img class="catalog__photo" src="./img/items/1.png" alt="#">
+                                    </a>
+                                    <a href="#" class="swiper-slide">
+                                        <img class="catalog__photo" src="./img/items/2.png" alt="#">
+                                    </a>
+                                    <a href="#" class="swiper-slide">
+                                        <img class="catalog__photo" src="./img/items/3.png" alt="#">
+                                    </a>
+                                </div>
+                                <div onclick="location.assign('/masters/avelina/')" class="swiper-pagination"></div>
+                            </div>
+                            <a href="#" class="catalog__name">Мультиинструмент «Крутому
+                                мужику»</a>
+                        </div>
+                        <div class="catalog__item-bottom">
+                            <ul class="weight">
+                                <li><a class="active" href="">800 г.</a></li>
+                                <li><a href="">500 г.</a></li>
+                                <li><a href="">350 г.</a></li>
+                            </ul>
+                            <p class="catalog__price old">
+                                1 430 руб.
+                                <span class="catalog__old-price">1 780 руб.</span>
+                            </p>
+                            <div class="catalog__to-cart">
+                                <div class="counter">
+                                    <button class="counter__symbol minus">-</button>
+                                    <input type="text" value="1">
+                                    <button class="counter__symbol plus">+</button>
+                                </div>
+                                <button class="btn">В корзину</button>
+                            </div>
+                        </div>
+                    </li>
+                </div>
+                <div class="swiper-slide">
+                    <li class="catalog__item ">
+                        <div class="catalog__item-top">
+                            <div class="swiper catalog__swiper">
+                                <ul class="labels">
+                                    <li style="background:#0FB429;">
+                                        <img src="./img/labels/1.png" alt="#">
+                                        <span>Новинка</span>
+                                    </li>
+                                </ul>
+                                <div class="swiper-wrapper">
+                                    <a href="#" class="swiper-slide">
+                                        <img class="catalog__photo" src="./img/items/2.png" alt="#">
+                                    </a>
+                                </div>
+                                <div onclick="location.assign('/masters/avelina/')" class="swiper-pagination"></div>
+                            </div>
+                            <a href="#" class="catalog__name">"Новогодняя фура" 800 г.</a>
+                        </div>
+                        <div class="catalog__item-bottom">
+                            <ul class="weight">
+                                <li><a class="active" href="">800 г.</a></li>
+                                <li><a href="">500 г.</a></li>
+                                <li><a href="">350 г.</a></li>
+                            </ul>
+                            <p class="catalog__price">
+                                1 430 руб.
+                            </p>
+                            <div class="catalog__to-cart">
+                                <div class="counter">
+                                    <button class="counter__symbol minus">-</button>
+                                    <input type="text" value="1">
+                                    <button class="counter__symbol plus">+</button>
+                                </div>
+                                <button class="btn">В корзину</button>
+                            </div>
+                        </div>
+                    </li>
+                </div>
+                <div class="swiper-slide">
+                    <li class="catalog__item ">
+                        <div class="catalog__item-top">
+                            <div class="swiper catalog__swiper">
+                                <ul class="labels">
+                                    <li style="background:#0FB429;">
+                                        <img src="./img/labels/1.png" alt="#">
+                                        <span>Новинка</span>
+                                    </li>
+                                    <li style="background:#E02F2F;">
+                                        <img src="./img/labels/2.png" alt="#">
+                                        <span>Акция</span>
+                                    </li>
+                                </ul>
+                                <div class="swiper-wrapper">
+                                    <a href="#" class="swiper-slide">
+                                        <img class="catalog__photo" src="./img/items/3.png" alt="#">
+                                    </a>
+                                    <a href="#" class="swiper-slide">
+                                        <img class="catalog__photo" src="./img/items/1.png" alt="#">
+                                    </a>
+                                    <a href="#" class="swiper-slide">
+                                        <img class="catalog__photo" src="./img/items/2.png" alt="#">
+                                    </a>
+
+                                </div>
+                                <div onclick="location.assign('/masters/avelina/')" class="swiper-pagination"></div>
+                            </div>
+                            <a href="#" class="catalog__name">Коробка подарочная «Best
+                                man»</a>
+                        </div>
+                        <div class="catalog__item-bottom">
+                            <p class="catalog__price">
+                                130 руб.
+                            </p>
+                            <div class="catalog__to-cart">
+                                <div class="counter">
+                                    <button class="counter__symbol minus">-</button>
+                                    <input type="text" value="1">
+                                    <button class="counter__symbol plus">+</button>
+                                </div>
+                                <button class="btn">В корзину</button>
+                            </div>
+                        </div>
+
+                    </li>
+                </div>
+                <div class="swiper-slide">
+                    <li class="catalog__item ">
+                        <div class="catalog__item-top">
+                            <div class="swiper catalog__swiper">
+                                <ul class="labels">
+                                    <li style="background:#0FB429;">
+                                        <img src="./img/labels/1.png" alt="#">
+                                        <span>Новинка</span>
+                                    </li>
+                                    <li style="background:#5B3AB9;">
+                                        <img src="./img/labels/3.png" alt="#">
+                                        <span>Хит</span>
+                                    </li>
+                                    <li style="background:#E02F2F;">
+                                        <img src="./img/labels/2.png" alt="#">
+                                        <span>Акция</span>
+                                    </li>
+                                </ul>
+                                <div class="swiper-wrapper">
+                                    <a href="#" class="swiper-slide">
+                                        <img class="catalog__photo" src="./img/items/1.png" alt="#">
+                                    </a>
+                                    <a href="#" class="swiper-slide">
+                                        <img class="catalog__photo" src="./img/items/2.png" alt="#">
+                                    </a>
+                                    <a href="#" class="swiper-slide">
+                                        <img class="catalog__photo" src="./img/items/3.png" alt="#">
+                                    </a>
+                                </div>
+                                <div onclick="location.assign('/masters/avelina/')" class="swiper-pagination"></div>
+                            </div>
+                            <a href="#" class="catalog__name">Мультиинструмент «Крутому
+                                мужику»</a>
+                        </div>
+                        <div class="catalog__item-bottom">
+                            <ul class="weight">
+                                <li><a class="active" href="">800 г.</a></li>
+                                <li><a href="">500 г.</a></li>
+                                <li><a href="">350 г.</a></li>
+                            </ul>
+                            <p class="catalog__price old">
+                                1 430 руб.
+                                <span class="catalog__old-price">1 780 руб.</span>
+                            </p>
+                            <div class="catalog__to-cart">
+                                <div class="counter">
+                                    <button class="counter__symbol minus">-</button>
+                                    <input type="text" value="1">
+                                    <button class="counter__symbol plus">+</button>
+                                </div>
+                                <button class="btn">В корзину</button>
+                            </div>
+                        </div>
+                    </li>
+                </div>
+                <div class="swiper-slide">
+                    <li class="catalog__item">
+                        <div class="catalog__item-top">
+                            <div class="swiper catalog__swiper">
+                                <ul class="labels">
+                                    <li style="background:#0FB429;">
+                                        <img src="./img/labels/1.png" alt="#">
+                                        <span>Новинка</span>
+                                    </li>
+                                </ul>
+                                <div class="swiper-wrapper">
+                                    <a href="#" class="swiper-slide">
+                                        <img class="catalog__photo" src="./img/items/2.png" alt="#">
+                                    </a>
+                                </div>
+                                <div onclick="location.assign('/masters/avelina/')" class="swiper-pagination"></div>
+                            </div>
+                            <a href="#" class="catalog__name">"Новогодняя фура" 800 г.</a>
+                        </div>
+                        <div class="catalog__item-bottom">
+                            <ul class="weight">
+                                <li><a class="active" href="">800 г.</a></li>
+                                <li><a href="">500 г.</a></li>
+                                <li><a href="">350 г.</a></li>
+                            </ul>
+                            <p class="catalog__price">
+                                1 430 руб.
+                            </p>
+                            <div class="catalog__to-cart">
+                                <div class="counter">
+                                    <button class="counter__symbol minus">-</button>
+                                    <input type="text" value="1">
+                                    <button class="counter__symbol plus">+</button>
+                                </div>
+                                <button class="btn">В корзину</button>
+                            </div>
+                        </div>
+                    </li>
+                </div>
+                <div class="swiper-slide">
+                    <li class="catalog__item ">
+                        <div class="catalog__item-top">
+                            <div class="swiper catalog__swiper">
+                                <ul class="labels">
+                                    <li style="background:#0FB429;">
+                                        <img src="./img/labels/1.png" alt="#">
+                                        <span>Новинка</span>
+                                    </li>
+                                </ul>
+                                <div class="swiper-wrapper">
+                                    <a href="#" class="swiper-slide">
+                                        <img class="catalog__photo" src="./img/items/2.png" alt="#">
+                                    </a>
+                                </div>
+                                <div onclick="location.assign('/masters/avelina/')" class="swiper-pagination"></div>
+                            </div>
+                            <a href="#" class="catalog__name">"Новогодняя фура" 800 г.</a>
+                        </div>
+                        <div class="catalog__item-bottom">
+                            <ul class="weight">
+                                <li><a class="active" href="">800 г.</a></li>
+                                <li><a href="">500 г.</a></li>
+                                <li><a href="">350 г.</a></li>
+                            </ul>
+                            <p class="catalog__price">
+                                1 430 руб.
+                            </p>
+                            <div class="catalog__to-cart">
+                                <div class="counter">
+                                    <button class="counter__symbol minus">-</button>
+                                    <input type="text" value="1">
+                                    <button class="counter__symbol plus">+</button>
+                                </div>
+                                <button class="btn">В корзину</button>
+                            </div>
+                        </div>
+                    </li>
+                </div>
+
+            </div>
+            <div class="swiper-scrollbar"></div>
+        </div>
+    </div>
+</section>
+            <section class="section section_faq">
+    <div class="page__container">
+        <form class="form form_faq">
+            <h2 class="form__title">Остались вопросы?</h2>
+            <div class="form__rows">
+                <div class="form__row">
+                    <input autocomplete="off" placeholder="Имя" name type="text" minlength="2">
+                </div>
+                <div class="form__row">
+                    <input autocomplete="off" placeholder="Email*" name required type="email">
+                </div>
+                <div class="form__row">
+                    <input autocomplete="off" minlength="17" placeholder="Телефон" name type="tel" id="phone">
+                </div>
+                <div class="form__row">
+                    <textarea minlength="5" autocomplete="off" required name placeholder="Ваш вопрос*"
+                        rows="5"></textarea>
+                </div>
+            </div>
+            <button disabled class="btn form__btn">отправить</button>
+            <div class="messengers">
+                <p class="messengers__title">Или напишите нам в мессенджеры</p>
+                <ul class="messengers__list">
+                    <li class="messengers__item">
+                        <a href="#" class="messengers__link wa">
+                            <svg>
+                                <use href="./img/icons/icons.svg#whatsapp"></use>
+                            </svg>
+                            <span>
+                                Написать в WhatsApp
+                            </span> </a>
+                    </li>
+                    <li class="messengers__item">
+                        <a href="#" class="messengers__link viber">
+                            <svg>
+                                <use href="./img/icons/icons.svg#viber"></use>
+                            </svg>
+                            <span>Написать в Viber</span></a>
+                    </li>
+                </ul>
+            </div>
+        </form>
+
+        <ul class="social2">
+            <li>
+                <a href="">
+                    <div>
+                        <svg>
+                            <use href="./img/icons/icons.svg#vk"></use>
+                        </svg>
+                    </div>
+
+                    <span>fabrikapodarkov186</span>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <div>
+                        <svg>
+                            <use href="./img/icons/icons.svg#whatsapp"></use>
+                        </svg>
+                    </div>
+
+                    <span>+7 (999) 99-9999</span>
+                </a>
+            </li>
+            <li>
+                <a href="/">
+                    <div>
+                        <svg>
+                            <use href="./img/icons/icons.svg#site"></use>
+                        </svg>
+                    </div>
+                    <span>snpodarki.ru</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</section>
+        </main>
+        <footer class="footer">
+    <div class="page__container">
+        <div class="footer__top">
+            <a href="/" class="footer__logo"></a>
+            <nav class="footer__menu">
+                <ul>
+                    <li><a href="#">Каталог</a></li>
+                    <li><a href="#">Акции</a></li>
+                    <li><a href="#">Доставка и оплата</a></li>
+                    <li><a href="#">О нас</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+            </nav>
+            <div class="footer__info">
+                <a href="tel:+73462229001" class="phone footer__phone">
+                    <div class="background">
+                        <svg>
+                            <use href="./img/icons/icons.svg#phone"></use>
+                        </svg>
+                    </div>
+
+                    <p>+7 3462 22-90-01</p>
+                </a>
+                <div class="address footer__address">
+                    <div class="background">
+                        <svg>
+                            <use href="./img/icons/icons.svg#address"></use>
+                        </svg>
+                    </div>
+
+                    <p>Сургут, Индустриальная 34, оф. 21</p>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="footer__bottom">
+            <p class="footer__copyright">2013-2016 г., «Фабрика подарков»</p>
+            <a href="" class="footer__politics">Политика обработки персональных данных</a>
+            <ul class="social footer__social">
+                <li>
+                    <a class="social__wa" href="">
+                        <svg>
+                            <use href="./img/icons/icons.svg#whatsapp"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a class="social__vk" href="">
+                        <svg>
+                            <use href="./img/icons/icons.svg#vk"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a class="social__viber" href="">
+                        <svg>
+                            <use href="./img/icons/icons.svg#viber"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="social__message">
+                    <p>Пишите нам, <b>мы на связи</b></p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</footer>
+        <div id="photo" class="popup">
+            <div class="popup__container">
+                <div class="popup__content">
+                    <img src="" alt="Image" class="popup__img">
+                </div>
+                <button class="popup__close">✖</button>
+            </div>
+        </div>
+
+        <div id="thanks" class="popup">
+            <div class="popup__container">
+                <div class="popup__content">
+                    <p class="thanks">Ваш вопрос отправлен успешно! <br> Мы с вами свяжемся в ближайшее время!</p>
+                </div>
+                <button class="popup__close">✖</button>
+            </div>
+        </div>
+
+        <div id="filter" class="popup">
+            <div class="popup__container">
+                <div class="popup__content">
+
+                </div>
+                <button class="popup__close">✖</button>
+            </div>
+        </div>
+
+        <div id="left-menu" class="popup">
+            <div class="popup__container">
+                <div class="popup__content">
+
+                </div>
+                <button class="popup__close">✖</button>
+            </div>
+        </div>
+
+        <div id="structure-popup" class="popup">
+            <div class="popup__container">
+                <div class="popup__content">
+
+                </div>
+                <button class="popup__close">✖</button>
+            </div>
+        </div>
+
+
+    </div>
+    <script src="./js/swiper-bundle.min.js"></script>
+    <script src="./js/app.js"></script>
+</body>
+
+</html>
