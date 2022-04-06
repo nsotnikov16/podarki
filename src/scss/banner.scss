@@ -11,14 +11,13 @@
         right: 0;
 
         object-fit: cover;
-        object-position: top center;
+        object-position: center;
         &_small {
             display: none;
         }
 
         &_big {
             display: block;
-            
         }
         @media (max-width: 767px) {
             &_small {
@@ -31,18 +30,22 @@
         }
     }
     .page__container {
-        transform: translateX(50px);
+        transform: translateX(90px);
+        @media (max-width: 767px) {
+            transform: translateX(10px);
+        }
+
+        @media (max-width: 320px) {
+            transform: translateX(0);
+        }
     }
     &__main {
-        
-        /* background: #ffffff; */
         position: relative;
-
         z-index: 9;
         max-width: 545px;
-        /* opacity: 0.7;
-        filter: blur(40px); */
-
+        @media (max-width: 1024px) {
+            max-width: 500px;
+        }
         &::before {
             content: "";
             position: absolute;
@@ -51,10 +54,10 @@
             left: -20px;
             bottom: -20px;
             background: #ffffff;
-            opacity: 0.8;
+            opacity: 0.9;
             z-index: -1;
             border-radius: 13px;
-            filter: blur(40px); 
+            filter: blur(40px);
         }
     }
 
@@ -62,30 +65,128 @@
         font-weight: 400;
         font-size: 50px;
         line-height: 60px;
+        @media (max-width: 1024px) {
+            font-size: 45px;
+        }
+
+        @media (max-width: 767px) {
+            font-size: 30px;
+            line-height: 39px;
+        }
+
+        @media (max-width: 320px) {
+            font-size: 25px;
+            line-height: 32px;
+        }
     }
 
     &__subtitle {
         font-family: "Tenor Sans";
         font-size: 24px;
         line-height: 31px;
-
         margin-top: 13px;
         max-width: 65%;
+        @media (max-width: 1024px) {
+            font-size: 20px;
+        }
+        @media (max-width: 767px) {
+            font-size: 18px;
+            line-height: 23px;
+        }
+        @media (max-width: 320px) {
+            font-size: 15px;
+            line-height: 20px;
+        }
     }
 
     &__btn {
         margin-top: 37px;
         display: inline-block;
         padding: 16px 20px;
+        @media (max-width: 767px) {
+            padding: 16px;
+            margin-top: 30px;
+        }
     }
 }
 .swiper {
 }
 .swiper-banner {
-    height: 750px;
+    height: 600px;
+    @media (max-width: 1289px) {
+        height: calc(450px + (150 + 150 * 0.7) * ((100vw - 768px) / 1289));
+    }
 
     .swiper-slide {
         padding-top: 135px;
+        @media (max-width: 1289px) {
+            padding-top: calc(65px + (70 + 70 * 0.7) * ((100vw - 768px) / 1289));
+        }
+
+        @media (max-width: 767px) {
+            padding-top: 80px;
+        }
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        width: 50px;
+        height: 50px;
+        background-color: rgba(255, 255, 255, 0.6);
+        border-radius: 50%;
+        color: #333;
+        &::after {
+            font-size: 25px;
+        }
+
+        @media (max-width: 767px) {
+            display: none;
+        }
+    }
+
+    .swiper-button-next {
+        right: 5%;
+    }
+    .swiper-button-prev {
+        left: 5%;
+    }
+
+    @media (max-width: 1310px) {
+        .swiper-button-next {
+            right: 10px;
+        }
+        .swiper-button-prev {
+            left: 10px;
+        }
+    }
+
+    .swiper-pagination-bullet {
+        background-color: white;
+        opacity: 1;
+        &:last-child {
+            &.swiper-pagination-bullet-active {
+                &::after {
+                    left: initial;
+                    right: 0;
+                }
+            }
+        }
+    }
+
+    .swiper-pagination-bullet-active {
+        width: 50px;
+        border-radius: 50px;
+        position: relative;
+        &::after {
+            position: absolute;
+            content: "";
+            top: 0;
+            left: 0;
+            width: 80%;
+            height: 100%;
+            background-color: #ffaf35;
+            border-radius: 50px;
+        }
     }
 }
 .swiper-button-next {

@@ -476,11 +476,12 @@ if (personalEmails.length > 0) {
 
 // Баннеры
 var swiperBanner = new Swiper(".swiper-banner", {
+    autoplay: true,
     navigation: {
         nextEl: ".swiper-banner .swiper-button-next",
         prevEl: ".swiper-banner .swiper-button-prev",
     },
     pagination: {
         el: '.swiper-banner .swiper-pagination',
-    }, 
+    },
 });
