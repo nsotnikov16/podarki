@@ -415,7 +415,7 @@ if (structure && scrollStructure) {
 
 
 /* Заказ */
-var swiperOrder = new Swiper(".order-swiper", {
+/* var swiperOrder = new Swiper(".order-swiper", {
     direction: "vertical",
     slidesPerView: "auto",
     freeMode: true,
@@ -423,7 +423,7 @@ var swiperOrder = new Swiper(".order-swiper", {
         el: ".order-swiper .swiper-scrollbar",
     },
     mousewheel: true,
-});
+}); */
 
 const selectMethodDeliveryOrder = document.querySelector('.order__select-adress')
 if (selectMethodDeliveryOrder) {
